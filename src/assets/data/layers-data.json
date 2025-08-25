@@ -1,0 +1,690 @@
+[
+  {
+    "Name": "AIL2",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Alpen Labs",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Anduro",
+    "Category": "Sidechain",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": ""
+  },
+  {
+    "Name": "AnetaBTC",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "ADA",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Arbitrum One",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "ARB",
+    "Fundraising / Capital": "",
+    "Founded": "2018.0"
+  },
+  {
+    "Name": "Ark",
+    "Category": "State Channel",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Avalanche",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "AVAX",
+    "Fundraising / Capital": "",
+    "Founded": "2018.0"
+  },
+  {
+    "Name": "B² Network",
+    "Category": "Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "BSQ",
+    "Fundraising / Capital": "\"HashKey",
+    "Founded": "IDG"
+  },
+  {
+    "Name": "Babylon",
+    "Category": "Sidechain",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "\"Polychain",
+    "Founded": "OKX Ventures"
+  },
+  {
+    "Name": "BEVM",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "\"Waterdrip",
+    "Founded": "ViaBTC"
+  },
+  {
+    "Name": "Biop",
+    "Category": "Rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "BIOP",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Bison",
+    "Category": "Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "\"Portal Ventures",
+    "Founded": "SatoshiLab"
+  },
+  {
+    "Name": "Bitcoin Virtual Machine",
+    "Category": "Rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "BVM",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "BitcoinVM",
+    "Category": "Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Bitcredit Protocol",
+    "Category": "Credit mint",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "brc-BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Bitfinity Network",
+    "Category": "Sidechain",
+    "Network Stage": "Testnet",
+    "Native Token": "BFT",
+    "Fundraising / Capital": "\"Polychain",
+    "Founded": "Dokia"
+  },
+  {
+    "Name": "BitLayer",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "BitReXe",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "rxBTC",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Bitsat",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "LD Capital",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "bitSmiley",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "\"OKX",
+    "Founded": "ArkStream"
+  },
+  {
+    "Name": "BL2",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "BL2T",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "BNB Chain",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "BNB",
+    "Fundraising / Capital": "",
+    "Founded": "2019.0"
+  },
+  {
+    "Name": "Bnzk",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "BNZK",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "BOB",
+    "Category": "Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "\"Castle Island",
+    "Founded": "UTXO Management"
+  },
+  {
+    "Name": "Bool Network",
+    "Category": "DA",
+    "Network Stage": "Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Botanix",
+    "Category": "Spiderchain",
+    "Network Stage": "Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "BounceBit",
+    "Category": "Sidechain",
+    "Network Stage": "Testnet",
+    "Native Token": "BB",
+    "Fundraising / Capital": "\"Breyer",
+    "Founded": "Bankless"
+  },
+  {
+    "Name": "Cashu",
+    "Category": "Chaumian Ecash",
+    "Network Stage": "Mainnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Citrea",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "\"Galaxy",
+    "Founded": "Delphi"
+  },
+  {
+    "Name": "Conflux",
+    "Category": "Sidechain",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "\"DWF Labs",
+    "Founded": "HTX"
+  },
+  {
+    "Name": "Core DAO",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "CORE",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Drivechain",
+    "Category": "Drivechain",
+    "Network Stage": "Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "EAST Blue",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Elastos",
+    "Category": "Rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "ELA",
+    "Fundraising / Capital": "",
+    "Founded": "2017.0"
+  },
+  {
+    "Name": "Ethereum",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "ETH",
+    "Fundraising / Capital": "",
+    "Founded": "2013.0"
+  },
+  {
+    "Name": "Fantom",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "FTM",
+    "Fundraising / Capital": "",
+    "Founded": "2018.0"
+  },
+  {
+    "Name": "Fedimint",
+    "Category": "Chaumian Ecash",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "fm-BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Finterest",
+    "Category": "",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "ICP",
+    "Fundraising / Capital": "\"Polychain",
+    "Founded": "9Yards\""
+  },
+  {
+    "Name": "Gelios",
+    "Category": "DA",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Hacash.com",
+    "Category": "Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "HAC",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "ICP",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "ckBTC",
+    "Fundraising / Capital": "\"A16z",
+    "Founded": "Coinfund"
+  },
+  {
+    "Name": "Interlay",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "INTR",
+    "Fundraising / Capital": "\"IOSG",
+    "Founded": "Zee Prime"
+  },
+  {
+    "Name": "Kadena",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "KDA",
+    "Fundraising / Capital": "\"Coinfund",
+    "Founded": "Multicoin\""
+  },
+  {
+    "Name": "Libre",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "LIBRE",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Lightec",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Lightning Network",
+    "Category": "State Channel",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2015.0"
+  },
+  {
+    "Name": "Ligo",
+    "Category": "Rollup",
+    "Network Stage": "",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Liquid Network",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "L-BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2018.0"
+  },
+  {
+    "Name": "LumiBit",
+    "Category": "Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "LBIT",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Map Protocol",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "MAPO",
+    "Fundraising / Capital": "\"DWF Labs",
+    "Founded": "Waterdrip Capital"
+  },
+  {
+    "Name": "Mercury Layer",
+    "Category": "Statechain",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2021.0"
+  },
+  {
+    "Name": "Merlin Chain",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Mintlayer",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "ML",
+    "Fundraising / Capital": "\"Moonrock",
+    "Founded": "Sky Ventures"
+  },
+  {
+    "Name": "Mirror L2",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "mBTC",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "MVC",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Nervos",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "CKB",
+    "Fundraising / Capital": "",
+    "Founded": "2018.0"
+  },
+  {
+    "Name": "Nostr Assets Protocol",
+    "Category": "State Channel",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Nubit",
+    "Category": "DA",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "\"dao5",
+    "Founded": "OKX"
+  },
+  {
+    "Name": "OmniBOLT",
+    "Category": "State Channel",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "\"Waterdrip",
+    "Founded": "Redline Labs"
+  },
+  {
+    "Name": "Polygon",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "MATIC",
+    "Fundraising / Capital": "",
+    "Founded": "2017.0"
+  },
+  {
+    "Name": "Polygon zkEVM",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "ETH",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "QED Protocol",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "\"Arrington",
+    "Founded": "StarkWare"
+  },
+  {
+    "Name": "RGB",
+    "Category": "Client-side",
+    "Network Stage": "Mainnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2016.0"
+  },
+  {
+    "Name": "RGB++",
+    "Category": "Client-side",
+    "Network Stage": "Mainnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2024.0"
+  },
+  {
+    "Name": "Rollkit",
+    "Category": "Sovereign Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Rollux",
+    "Category": "Rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "SYS",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Rooch Network",
+    "Category": "Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Rootstock",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "RBTC",
+    "Fundraising / Capital": "",
+    "Founded": "2015.0"
+  },
+  {
+    "Name": "Rosetta Network",
+    "Category": "Sidechain",
+    "Network Stage": "Testnet",
+    "Native Token": "RSTT",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Satoshi Protocol",
+    "Category": "",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "\"Waterdrip",
+    "Founded": "SatoshiLab"
+  },
+  {
+    "Name": "SatoshiSync",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "SSNC",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "SatoshiVM",
+    "Category": "Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "SAVM",
+    "Fundraising / Capital": "",
+    "Founded": "2023.0"
+  },
+  {
+    "Name": "Side Protocol",
+    "Category": "Sidechain",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": ""
+  },
+  {
+    "Name": "Sovryn",
+    "Category": "Rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "RBTC",
+    "Fundraising / Capital": "\"General Catalyst",
+    "Founded": "Blockware"
+  },
+  {
+    "Name": "Spark",
+    "Category": "Statechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "",
+    "Founded": "2022"
+  },
+  {
+    "Name": "Stacks",
+    "Category": "Anchored Chain",
+    "Network Stage": "Mainnet",
+    "Native Token": "STX",
+    "Fundraising / Capital": "\"SV Angel",
+    "Founded": "2019"
+  },
+  {
+    "Name": "Syscoin",
+    "Category": "DA",
+    "Network Stage": "Mainnet",
+    "Native Token": "SYS",
+    "Fundraising / Capital": "",
+    "Founded": "2014.0"
+  },
+  {
+    "Name": "THORChain",
+    "Category": "Liquidity Pool",
+    "Network Stage": "Mainnet",
+    "Native Token": "RUNE",
+    "Fundraising / Capital": "\"Delphi",
+    "Founded": "Multicoin\""
+  },
+  {
+    "Name": "TRON",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Mainnet",
+    "Native Token": "TRX",
+    "Fundraising / Capital": "",
+    "Founded": "2017.0"
+  },
+  {
+    "Name": "TunaChain",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "TUNA",
+    "Fundraising / Capital": "\"MH Ventures",
+    "Founded": "Serafund"
+  },
+  {
+    "Name": "U Protocol",
+    "Category": "Rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "uBTC",
+    "Fundraising / Capital": "\"Alfa DAO",
+    "Founded": "YAM DAO\""
+  },
+  {
+    "Name": "ZeroSync",
+    "Category": "Validity Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2022.0"
+  },
+  {
+    "Name": "Zeus Network",
+    "Category": "Wrapped Tokens",
+    "Network Stage": "Testnet",
+    "Native Token": "ZEUS",
+    "Fundraising / Capital": "\"Mechanism",
+    "Founded": "OKX"
+  },
+  {
+    "Name": "zkBase",
+    "Category": "Rollup",
+    "Network Stage": "Pre-Testnet",
+    "Native Token": "",
+    "Fundraising / Capital": "",
+    "Founded": "2020.0"
+  },
+  {
+    "Name": "ZKSats",
+    "Category": "Rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Fundraising / Capital": "\"Sora Ventures",
+    "Founded": "Bitcoin Frontier Fund\""
+  },
+  {
+    "Name": "Zulu Network",
+    "Category": "Rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "ZULU",
+    "Fundraising / Capital": "\"Waterdrip",
+    "Founded": "SatoshiLab"
+  }
+]
