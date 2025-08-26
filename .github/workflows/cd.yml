@@ -4,33 +4,32 @@ on:
   push:
     branches:
       - main
-  # optional: also run when PR is merged to main
-  pull_request:
-    types:
-      - closed
 
 jobs:
   cd:
     name: Build and deploy
+
     strategy:
       matrix:
         os: [ubuntu-latest]
         node: [20]
+
     runs-on: ${{ matrix.os }}
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v2.0.1
         with:
           version: 9.2.0
-          run_install: false
+          run_install: false   # <- added to avoid hitting npm registry
 
-      - name: Setup Node.js
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18
 
       - name: Install dependencies
         run: pnpm install
@@ -43,5 +42,5 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           publish_dir: ./dist
