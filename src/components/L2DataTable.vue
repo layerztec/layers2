@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
+import layersData from '@/assets/data/layers-data.json';
 
 // Reactive data
 const tableData = ref([]);
@@ -22,9 +23,8 @@ const filteredData = computed(() => {
 // Load JSON data
 const loadData = async () => {
   try {
-    const response = await fetch('/src/assets/data/layers-data.json');
-    const data = await response.json();
-    tableData.value = data;
+    // Use imported data directly instead of fetch
+    tableData.value = layersData;
     loading.value = false;
   } catch (error) {
     // eslint-disable-next-line no-console
