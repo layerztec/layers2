@@ -47,18 +47,22 @@ onMounted(() => {
 
     <!-- Search Input -->
     <div class="mb-4">
-        <input
-          v-model="searchTerm"
-          type="text"
-          placeholder="Search protocols..."
-        class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+      <input
+        v-model="searchTerm"
+        type="text"
+        placeholder="Search protocols..."
+        class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400"
       >
     </div>
 
     <!-- Table -->
     <div class="overflow-x-auto">
-      <table class="min-w-full rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+      <table
+        class="min-w-full rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800"
+      >
+        <thead
+          class="bg-gray-50 dark:bg-gray-700"
+        >
           <tr>
             <th
               v-for="header in tableHeaders"
@@ -67,17 +71,21 @@ onMounted(() => {
                 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300
               "
             >
-                {{ header }}
+              {{ header }}
             </th>
           </tr>
         </thead>
         <tbody
-          class="divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800"
+          class="
+            divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800
+          "
         >
           <tr
             v-for="(item, index) in filteredData"
             :key="index"
-            class="hover:bg-gray-50 dark:hover:bg-gray-700"
+            class="
+              hover:bg-gray-50 dark:hover:bg-gray-700
+            "
           >
             <td
               v-for="header in tableHeaders"
@@ -94,21 +102,33 @@ onMounted(() => {
     </div>
 
     <!-- Loading State -->
-    <div v-if="loading" class="py-8 text-center">
-      <p class="text-gray-500 dark:text-gray-400">
+    <div
+      v-if="loading"
+      class="py-8 text-center"
+    >
+      <p
+        class="text-gray-500 dark:text-gray-400"
+      >
         Loading data...
       </p>
     </div>
 
     <!-- No Results -->
-    <div v-else-if="filteredData.length === 0" class="py-8 text-center">
-      <p class="text-gray-500 dark:text-gray-400">
+    <div
+      v-else-if="filteredData.length === 0"
+      class="py-8 text-center"
+    >
+      <p
+        class="text-gray-500 dark:text-gray-400"
+      >
         No protocols found.
       </p>
     </div>
 
     <!-- Data Count -->
-    <div class="mt-4 text-sm text-gray-600 dark:text-gray-400">
+    <div
+      class="mt-4 text-sm text-gray-600 dark:text-gray-400"
+    >
       Showing {{ filteredData.length }} of {{ tableData.length }} protocols
     </div>
   </div>
