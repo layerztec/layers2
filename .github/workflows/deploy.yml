@@ -1,11 +1,10 @@
 name: Deploy Vite site to GitHub Pages
 
-# Trigger deploy only when a PR is merged into main
 on:
   push:
     branches:
-      - main   # deploy only happens when main gets new commits (including merged PRs)
-  workflow_dispatch:   # optional: allows manual trigger if needed
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -23,19 +22,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: "pnpm"    # 👈 tells setup-node to cache pnpm dependencies
+
+      - name: Install pnpm
+        run: corepack enable && corepack prepare pnpm@latest --activate
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build site
         env:
           VITE_BASE_PUBLIC_PATH: ${{ secrets.VITE_BASE_PUBLIC_PATH }}
-        run: npm run build
+        run: pnpm run build
 
       - name: Upload build output
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist  # Vite outputs to dist
+          path: dist
 
   deploy:
     needs: build
