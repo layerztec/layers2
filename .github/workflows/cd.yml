@@ -32,6 +32,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Cache PNPM Store
         uses: actions/cache@v3
@@ -42,7 +43,9 @@ jobs:
             ${{ runner.os }}-pnpm-
 
       - name: Install dependencies
-        run: pnpm install
+        run: |
+          pnpm config set registry https://registry.npmjs.org/
+          pnpm install --frozen-lockfile --prefer-offline
 
       - name: Build
         env:
