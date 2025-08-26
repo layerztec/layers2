@@ -5,7 +5,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Alpen Labs",
@@ -13,7 +13,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Anduro",
@@ -21,7 +21,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": ""
   },
   {
     "Name": "AnetaBTC",
@@ -29,7 +29,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "ADA",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Arbitrum One",
@@ -37,7 +37,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "ARB",
     "Fundraising / Capital": "",
-    "Founded": "2018"
+    "Founded": "2018.0"
   },
   {
     "Name": "Ark",
@@ -45,7 +45,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BTC",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Avalanche",
@@ -53,7 +53,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "AVAX",
     "Fundraising / Capital": "",
-    "Founded": "2018"
+    "Founded": "2018.0"
   },
   {
     "Name": "B² Network",
@@ -85,7 +85,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "BIOP",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Bison",
@@ -101,7 +101,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "BVM",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "BitcoinVM",
@@ -109,7 +109,7 @@
     "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Bitcredit Protocol",
@@ -117,7 +117,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "brc-BTC",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Bitfinity Network",
@@ -125,7 +125,7 @@
     "Network Stage": "Testnet",
     "Native Token": "BFT",
     "Fundraising / Capital": "\"Polychain",
-    "Founded": ""
+    "Founded": "Dokia"
   },
   {
     "Name": "BitLayer",
@@ -133,7 +133,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "BitReXe",
@@ -141,7 +141,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "rxBTC",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Bitsat",
@@ -149,7 +149,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Fundraising / Capital": "LD Capital",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "bitSmiley",
@@ -165,7 +165,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BL2T",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "BNB Chain",
@@ -173,7 +173,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "BNB",
     "Fundraising / Capital": "",
-    "Founded": "2019"
+    "Founded": "2019.0"
   },
   {
     "Name": "Bnzk",
@@ -181,7 +181,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BNZK",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "BOB",
@@ -189,7 +189,7 @@
     "Network Stage": "Testnet",
     "Native Token": "",
     "Fundraising / Capital": "\"Castle Island",
-    "Founded": ""
+    "Founded": "UTXO Management"
   },
   {
     "Name": "Bool Network",
@@ -197,7 +197,7 @@
     "Network Stage": "Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Botanix",
@@ -205,7 +205,7 @@
     "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "BounceBit",
@@ -221,7 +221,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Citrea",
@@ -245,7 +245,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "CORE",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Drivechain",
@@ -253,7 +253,7 @@
     "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "EAST Blue",
@@ -261,7 +261,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Elastos",
@@ -269,7 +269,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "ELA",
     "Fundraising / Capital": "",
-    "Founded": "2017"
+    "Founded": "2017.0"
   },
   {
     "Name": "Ethereum",
@@ -277,7 +277,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "ETH",
     "Fundraising / Capital": "",
-    "Founded": "2013"
+    "Founded": "2013.0"
   },
   {
     "Name": "Fantom",
@@ -285,7 +285,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "FTM",
     "Fundraising / Capital": "",
-    "Founded": "2018"
+    "Founded": "2018.0"
   },
   {
     "Name": "Fedimint",
@@ -293,7 +293,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "fm-BTC",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Finterest",
@@ -309,7 +309,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Hacash.com",
@@ -317,7 +317,7 @@
     "Network Stage": "Testnet",
     "Native Token": "HAC",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "ICP",
@@ -349,7 +349,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "LIBRE",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Lightec",
@@ -357,7 +357,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Lightning Network",
@@ -365,7 +365,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Fundraising / Capital": "",
-    "Founded": "2015"
+    "Founded": "2015.0"
   },
   {
     "Name": "Ligo",
@@ -373,7 +373,7 @@
     "Network Stage": "",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Liquid Network",
@@ -381,7 +381,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "L-BTC",
     "Fundraising / Capital": "",
-    "Founded": "2018"
+    "Founded": "2018.0"
   },
   {
     "Name": "LumiBit",
@@ -389,7 +389,7 @@
     "Network Stage": "Testnet",
     "Native Token": "LBIT",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Map Protocol",
@@ -405,7 +405,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BTC",
     "Fundraising / Capital": "",
-    "Founded": "2021"
+    "Founded": "2021.0"
   },
   {
     "Name": "Merlin Chain",
@@ -413,7 +413,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Mintlayer",
@@ -421,7 +421,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "ML",
     "Fundraising / Capital": "\"Moonrock",
-    "Founded": ""
+    "Founded": "Sky Ventures"
   },
   {
     "Name": "Mirror L2",
@@ -429,7 +429,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "mBTC",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "MVC",
@@ -437,7 +437,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Nervos",
@@ -445,7 +445,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "CKB",
     "Fundraising / Capital": "",
-    "Founded": "2018"
+    "Founded": "2018.0"
   },
   {
     "Name": "Nostr Assets Protocol",
@@ -453,7 +453,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Nubit",
@@ -477,7 +477,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "MATIC",
     "Fundraising / Capital": "",
-    "Founded": "2017"
+    "Founded": "2017.0"
   },
   {
     "Name": "Polygon zkEVM",
@@ -485,7 +485,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "ETH",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "QED Protocol",
@@ -501,7 +501,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2016"
+    "Founded": "2016.0"
   },
   {
     "Name": "RGB++",
@@ -509,7 +509,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2024"
+    "Founded": "2024.0"
   },
   {
     "Name": "Rollkit",
@@ -517,7 +517,7 @@
     "Network Stage": "Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Rollux",
@@ -525,7 +525,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "SYS",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Rooch Network",
@@ -533,7 +533,7 @@
     "Network Stage": "Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Rootstock",
@@ -541,7 +541,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "RBTC",
     "Fundraising / Capital": "",
-    "Founded": "2015"
+    "Founded": "2015.0"
   },
   {
     "Name": "Rosetta Network",
@@ -549,7 +549,7 @@
     "Network Stage": "Testnet",
     "Native Token": "RSTT",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Satoshi Protocol",
@@ -565,7 +565,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "SSNC",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "SatoshiVM",
@@ -573,7 +573,7 @@
     "Network Stage": "Testnet",
     "Native Token": "SAVM",
     "Fundraising / Capital": "",
-    "Founded": "2023"
+    "Founded": "2023.0"
   },
   {
     "Name": "Side Protocol",
@@ -613,7 +613,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "SYS",
     "Fundraising / Capital": "",
-    "Founded": "2014"
+    "Founded": "2014.0"
   },
   {
     "Name": "THORChain",
@@ -629,7 +629,7 @@
     "Network Stage": "Mainnet",
     "Native Token": "TRX",
     "Fundraising / Capital": "",
-    "Founded": "2017"
+    "Founded": "2017.0"
   },
   {
     "Name": "TunaChain",
@@ -653,7 +653,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2022"
+    "Founded": "2022.0"
   },
   {
     "Name": "Zeus Network",
@@ -669,7 +669,7 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Fundraising / Capital": "",
-    "Founded": "2020"
+    "Founded": "2020.0"
   },
   {
     "Name": "ZKSats",

@@ -47,10 +47,10 @@ onMounted(() => {
 
     <!-- Search Input -->
     <div class="mb-4">
-      <input
-        v-model="searchTerm"
-        type="text"
-        placeholder="Search protocols..."
+        <input
+          v-model="searchTerm"
+          type="text"
+          placeholder="Search protocols..."
         class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
       >
     </div>
@@ -67,7 +67,7 @@ onMounted(() => {
                 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300
               "
             >
-              {{ header }}
+                {{ header }}
             </th>
           </tr>
         </thead>
