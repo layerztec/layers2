@@ -68,7 +68,7 @@ onMounted(() => {
               v-for="header in tableHeaders"
               :key="header"
               class="
-                px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300
+                px-6 py-3 text-xs font-medium text-left uppercase tracking-wider text-gray-500 dark:text-gray-300
               "
             >
               {{ header }}
