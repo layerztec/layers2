@@ -212,7 +212,7 @@ onMounted(() => {
               <div class="flex items-center justify-center">
                 <img
                   v-if="item.Image"
-                  :src="`/src/assets/data/img/${item.Image}`"
+                  :src="`/assets/data/img/${item.Image}`"
                   :alt="`${item.Name} logo`"
                   class="size-8 rounded-full object-cover"
                   @error="handleImageError"
