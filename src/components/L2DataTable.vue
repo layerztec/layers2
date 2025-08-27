@@ -9,9 +9,6 @@ const selectedCategory = ref('');
 const selectedNetworkStage = ref('');
 const loading = ref(true);
 
-// Table headers
-const tableHeaders = ['Name', 'Category', 'Network Stage', 'Native Token', 'Founded'];
-
 // Get unique values for filters
 const categories = computed(() => {
   const uniqueCategories = [...new Set(tableData.value.map((item) => item.Category).filter(Boolean))];
@@ -66,6 +63,17 @@ const clearFilters = () => {
   searchTerm.value = '';
   selectedCategory.value = '';
   selectedNetworkStage.value = '';
+};
+
+// Handle image loading errors
+const handleImageError = (event) => {
+  // Replace broken image with placeholder
+  const { target } = event;
+  target.style.display = 'none';
+  const placeholder = target.nextElementSibling;
+  if (placeholder) {
+    placeholder.style.display = 'flex';
+  }
 };
 
 // Lifecycle
@@ -156,14 +164,34 @@ onMounted(() => {
           class="bg-gray-50 dark:bg-gray-700"
         >
           <tr>
-            <th
-              v-for="header in tableHeaders"
-              :key="header"
-              class="
-                px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300
-              "
-            >
-              {{ header }}
+            <!-- Logo Header -->
+            <th class="px-6 py-3 text-center text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
+              Logo
+            </th>
+
+            <!-- Name Header -->
+            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
+              Name
+            </th>
+
+            <!-- Category Header -->
+            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
+              Category
+            </th>
+
+            <!-- Network Stage Header -->
+            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
+              Network Stage
+            </th>
+
+            <!-- Native Token Header -->
+            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
+              Native Token
+            </th>
+
+            <!-- Founded Header -->
+            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
+              Founded
             </th>
           </tr>
         </thead>
@@ -179,14 +207,48 @@ onMounted(() => {
               hover:bg-gray-50 dark:hover:bg-gray-700
             "
           >
-            <td
-              v-for="header in tableHeaders"
-              :key="header"
-              class="
-                whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100
-              "
-            >
-              {{ item[header] || '-' }}
+            <!-- Logo Column -->
+            <td class="whitespace-nowrap px-6 py-4 text-center">
+              <div class="flex items-center justify-center">
+                <img
+                  v-if="item.Image"
+                  :src="`/src/assets/data/img/${item.Image}`"
+                  :alt="`${item.Name} logo`"
+                  class="size-8 rounded-full object-cover"
+                  @error="handleImageError"
+                >
+                <div
+                  v-else
+                  class="flex size-8 items-center justify-center rounded-full bg-gray-200 text-xs text-gray-500 dark:bg-gray-600 dark:text-gray-400"
+                >
+                  ?
+                </div>
+              </div>
+            </td>
+
+            <!-- Name Column -->
+            <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
+              {{ item.Name || '-' }}
+            </td>
+
+            <!-- Category Column -->
+            <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
+              {{ item.Category || '-' }}
+            </td>
+
+            <!-- Network Stage Column -->
+            <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
+              {{ item['Network Stage'] || '-' }}
+            </td>
+
+            <!-- Native Token Column -->
+            <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
+              {{ item['Native Token'] || '-' }}
+            </td>
+
+            <!-- Founded Column -->
+            <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
+              {{ item.Founded || '-' }}
             </td>
           </tr>
         </tbody>

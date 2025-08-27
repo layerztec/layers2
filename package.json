@@ -12,6 +12,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "puppeteer": "^24.17.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
