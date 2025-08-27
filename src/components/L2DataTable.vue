@@ -76,6 +76,9 @@ const handleImageError = (event) => {
   }
 };
 
+// Get image URL for a protocol
+const getImageUrl = (imageName) => new URL(`../assets/data/img/${imageName}`, import.meta.url).href;
+
 // Lifecycle
 onMounted(() => {
   loadData();
@@ -212,7 +215,7 @@ onMounted(() => {
               <div class="flex items-center justify-center">
                 <img
                   v-if="item.Image"
-                  :src="`/assets/data/img/${item.Image}`"
+                  :src="getImageUrl(item.Image)"
                   :alt="`${item.Name} logo`"
                   class="size-8 rounded-full object-cover"
                   @error="handleImageError"
