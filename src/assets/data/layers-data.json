@@ -5,7 +5,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "2023",
-    "Image": "ail2.png"
+    "Image": "ail2.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Alpen Labs",
@@ -13,7 +14,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "2022",
-    "Image": "alpen-labs.png"
+    "Image": "alpen-labs.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Anduro",
@@ -21,15 +23,17 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "",
-    "Image": "anduro.png"
+    "Image": "anduro.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Ark",
     "Category": "State Channel",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "2023",
-    "Image": "ark.png"
+    "Image": "ark.png",
+    "Type": "Bitcoin Native"
   },
   {
     "Name": "B² Network",
@@ -37,7 +41,8 @@
     "Network Stage": "Testnet",
     "Native Token": "BSQ",
     "Founded": "",
-    "Image": "b-network.png"
+    "Image": "b-network.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Babylon",
@@ -45,7 +50,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "",
-    "Image": "babylon.png"
+    "Image": "babylon.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "BEVM",
@@ -53,7 +59,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "",
-    "Image": "bevm.png"
+    "Image": "bevm.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Biop",
@@ -61,7 +68,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "BIOP",
     "Founded": "2023",
-    "Image": "biop.png"
+    "Image": "biop.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Bison",
@@ -69,7 +77,8 @@
     "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "",
-    "Image": "bison.png"
+    "Image": "bison.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Bitcoin Virtual Machine",
@@ -77,7 +86,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "BVM",
     "Founded": "2023",
-    "Image": "bitcoin-virtual-machine.png"
+    "Image": "bitcoin-virtual-machine.png",
+    "Type": "Rollup"
   },
   {
     "Name": "BitcoinVM",
@@ -85,7 +95,8 @@
     "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "2023",
-    "Image": "bitcoinvm.png"
+    "Image": "bitcoinvm.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Bitcredit Protocol",
@@ -93,7 +104,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "brc-BTC",
     "Founded": "2022",
-    "Image": "bitcredit-protocol.png"
+    "Image": "bitcredit-protocol.png",
+    "Type": "Other"
   },
   {
     "Name": "Bitfinity Network",
@@ -101,7 +113,8 @@
     "Network Stage": "Testnet",
     "Native Token": "BFT",
     "Founded": "",
-    "Image": "bitfinity-network.png"
+    "Image": "bitfinity-network.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "BitLayer",
@@ -109,7 +122,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "2023",
-    "Image": "bitlayer.png"
+    "Image": "bitlayer.png",
+    "Type": "Rollup"
   },
   {
     "Name": "BitReXe",
@@ -117,7 +131,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "rxBTC",
     "Founded": "2023",
-    "Image": "bitrexe.png"
+    "Image": "bitrexe.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Bitsat",
@@ -125,7 +140,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "2023",
-    "Image": "bitsat.png"
+    "Image": "bitsat.png",
+    "Type": "Rollup"
   },
   {
     "Name": "bitSmiley",
@@ -133,7 +149,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BTC",
     "Founded": "",
-    "Image": "bitsmiley.png"
+    "Image": "bitsmiley.png",
+    "Type": "Rollup"
   },
   {
     "Name": "BL2",
@@ -141,7 +158,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BL2T",
     "Founded": "2023",
-    "Image": "bl2.png"
+    "Image": "bl2.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Bnzk",
@@ -149,7 +167,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BNZK",
     "Founded": "2023",
-    "Image": "bnzk.png"
+    "Image": "bnzk.png",
+    "Type": "Rollup"
   },
   {
     "Name": "BOB",
@@ -157,7 +176,8 @@
     "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "",
-    "Image": "bob.png"
+    "Image": "bob.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Bool Network",
@@ -165,7 +185,8 @@
     "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "2022",
-    "Image": "bool-network.png"
+    "Image": "bool-network.png",
+    "Type": "Other"
   },
   {
     "Name": "Botanix",
@@ -173,7 +194,8 @@
     "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "2022",
-    "Image": "botanix.png"
+    "Image": "botanix.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "BounceBit",
@@ -181,7 +203,8 @@
     "Network Stage": "Testnet",
     "Native Token": "BB",
     "Founded": "",
-    "Image": "bouncebit.png"
+    "Image": "bouncebit.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Cashu",
@@ -189,7 +212,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "",
     "Founded": "2022",
-    "Image": "cashu.png"
+    "Image": "cashu.png",
+    "Type": "Other"
   },
   {
     "Name": "Citrea",
@@ -197,7 +221,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BTC",
     "Founded": "",
-    "Image": "citrea.png"
+    "Image": "citrea.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Conflux",
@@ -205,7 +230,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "",
-    "Image": "conflux.png"
+    "Image": "conflux.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Core DAO",
@@ -213,7 +239,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "CORE",
     "Founded": "2022",
-    "Image": "core-dao.png"
+    "Image": "core-dao.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Drivechain",
@@ -221,7 +248,8 @@
     "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "2022",
-    "Image": "drivechain.png"
+    "Image": "drivechain.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "EAST Blue",
@@ -229,7 +257,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "2023",
-    "Image": "east-blue.png"
+    "Image": "east-blue.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Elastos",
@@ -237,7 +266,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "ELA",
     "Founded": "2017",
-    "Image": "elastos.png"
+    "Image": "elastos.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Fedimint",
@@ -245,7 +275,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "fm-BTC",
     "Founded": "2022",
-    "Image": "fedimint.png"
+    "Image": "fedimint.png",
+    "Type": "Other"
   },
   {
     "Name": "Gelios",
@@ -253,7 +284,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2023",
-    "Image": "gelios.png"
+    "Image": "gelios.png",
+    "Type": "Other"
   },
   {
     "Name": "Hacash.com",
@@ -261,7 +293,8 @@
     "Network Stage": "Testnet",
     "Native Token": "HAC",
     "Founded": "2022",
-    "Image": "hacashcom.png"
+    "Image": "hacashcom.png",
+    "Type": "Rollup"
   },
   {
     "Name": "ICP",
@@ -269,7 +302,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "ckBTC",
     "Founded": "",
-    "Image": "icp.png"
+    "Image": "icp.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Kadena",
@@ -277,7 +311,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "KDA",
     "Founded": "",
-    "Image": "kadena.png"
+    "Image": "kadena.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Libre",
@@ -285,7 +320,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "LIBRE",
     "Founded": "2022",
-    "Image": "libre.png"
+    "Image": "libre.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Lightec",
@@ -293,7 +329,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "2023",
-    "Image": "lightec.png"
+    "Image": "lightec.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Lightning Network",
@@ -301,7 +338,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2015",
-    "Image": "lightning-network.png"
+    "Image": "lightning-network.png",
+    "Type": "Bitcoin Native"
   },
   {
     "Name": "Ligo",
@@ -309,7 +347,8 @@
     "Network Stage": "",
     "Native Token": "",
     "Founded": "2022",
-    "Image": "ligo.png"
+    "Image": "ligo.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Liquid Network",
@@ -317,7 +356,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "L-BTC",
     "Founded": "2018",
-    "Image": "liquid-network.png"
+    "Image": "liquid-network.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "LumiBit",
@@ -325,7 +365,8 @@
     "Network Stage": "Testnet",
     "Native Token": "LBIT",
     "Founded": "2023",
-    "Image": "lumibit.png"
+    "Image": "lumibit.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Map Protocol",
@@ -333,15 +374,17 @@
     "Network Stage": "Mainnet",
     "Native Token": "MAPO",
     "Founded": "",
-    "Image": "map-protocol.png"
+    "Image": "map-protocol.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Mercury Layer",
     "Category": "Statechain",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2021",
-    "Image": "mercury-layer.png"
+    "Image": "mercury-layer.png",
+    "Type": "Bitcoin Native"
   },
   {
     "Name": "Merlin Chain",
@@ -349,7 +392,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "",
     "Founded": "2023",
-    "Image": "merlin-chain.png"
+    "Image": "merlin-chain.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Mintlayer",
@@ -357,7 +401,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "ML",
     "Founded": "",
-    "Image": "mintlayer.png"
+    "Image": "mintlayer.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Mirror L2",
@@ -365,7 +410,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "mBTC",
     "Founded": "2023",
-    "Image": "mirror-l2.png"
+    "Image": "mirror-l2.png",
+    "Type": "Rollup"
   },
   {
     "Name": "MVC",
@@ -373,7 +419,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "",
     "Founded": "2022",
-    "Image": "mvc.png"
+    "Image": "mvc.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Nervos",
@@ -381,7 +428,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "CKB",
     "Founded": "2018",
-    "Image": "nervos.png"
+    "Image": "nervos.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Nostr Assets Protocol",
@@ -389,7 +437,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2023",
-    "Image": "nostr-assets-protocol.png"
+    "Image": "nostr-assets-protocol.png",
+    "Type": "Other"
   },
   {
     "Name": "Nubit",
@@ -397,7 +446,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BTC",
     "Founded": "",
-    "Image": "nubit.png"
+    "Image": "nubit.png",
+    "Type": "Other"
   },
   {
     "Name": "OmniBOLT",
@@ -405,7 +455,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "",
-    "Image": "omnibolt.png"
+    "Image": "omnibolt.png",
+    "Type": "Other"
   },
   {
     "Name": "QED Protocol",
@@ -413,23 +464,26 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "StarkWare",
-    "Image": "qed-protocol.png"
+    "Image": "qed-protocol.png",
+    "Type": "Rollup"
   },
   {
     "Name": "RGB",
     "Category": "Client-side",
     "Network Stage": "Mainnet",
-    "Native Token": "",
+    "Native Token": "BTC",
     "Founded": "2016",
-    "Image": "rgb.png"
+    "Image": "rgb.png",
+    "Type": "Bitcoin Native"
   },
   {
     "Name": "RGB++",
     "Category": "Client-side",
     "Network Stage": "Mainnet",
-    "Native Token": "",
+    "Native Token": "BTC",
     "Founded": "2024",
-    "Image": "rgb.png"
+    "Image": "rgb.png",
+    "Type": "Other"
   },
   {
     "Name": "Rollkit",
@@ -437,7 +491,8 @@
     "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "2022",
-    "Image": "rollkit.png"
+    "Image": "rollkit.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Rollux",
@@ -445,7 +500,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "SYS",
     "Founded": "2023",
-    "Image": "rollux.png"
+    "Image": "rollux.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Rooch Network",
@@ -453,7 +509,8 @@
     "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "2022",
-    "Image": "rooch-network.png"
+    "Image": "rooch-network.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Rootstock",
@@ -461,7 +518,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "RBTC",
     "Founded": "2015",
-    "Image": "rootstock.png"
+    "Image": "rootstock.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Rosetta Network",
@@ -469,7 +527,8 @@
     "Network Stage": "Testnet",
     "Native Token": "RSTT",
     "Founded": "2022",
-    "Image": "rosetta-network.png"
+    "Image": "rosetta-network.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Satoshi Protocol",
@@ -477,7 +536,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BTC",
     "Founded": "",
-    "Image": "satoshi-protocol.png"
+    "Image": "satoshi-protocol.png",
+    "Type": "Other"
   },
   {
     "Name": "SatoshiSync",
@@ -485,7 +545,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "SSNC",
     "Founded": "2023",
-    "Image": "satoshisync.png"
+    "Image": "satoshisync.png",
+    "Type": "Rollup"
   },
   {
     "Name": "SatoshiVM",
@@ -493,7 +554,8 @@
     "Network Stage": "Testnet",
     "Native Token": "SAVM",
     "Founded": "2023",
-    "Image": "satoshivm.png"
+    "Image": "satoshivm.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Side Protocol",
@@ -501,7 +563,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "BTC",
     "Founded": "",
-    "Image": "side-protocol.png"
+    "Image": "side-protocol.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Sovryn",
@@ -509,7 +572,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "RBTC",
     "Founded": "",
-    "Image": "sovryn.png"
+    "Image": "sovryn.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Spark",
@@ -517,7 +581,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2022",
-    "Image": "spark.png"
+    "Image": "spark.png",
+    "Type": "Bitcoin Native"
   },
   {
     "Name": "Stacks",
@@ -525,7 +590,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "STX",
     "Founded": "2019",
-    "Image": "stacks.png"
+    "Image": "stacks.png",
+    "Type": "Sidechain"
   },
   {
     "Name": "Syscoin",
@@ -533,7 +599,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "SYS",
     "Founded": "2014",
-    "Image": "syscoin.png"
+    "Image": "syscoin.png",
+    "Type": "Other"
   },
   {
     "Name": "THORChain",
@@ -541,7 +608,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "RUNE",
     "Founded": "",
-    "Image": "thorchain.png"
+    "Image": "thorchain.png",
+    "Type": "Other"
   },
   {
     "Name": "TunaChain",
@@ -549,7 +617,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "TUNA",
     "Founded": "",
-    "Image": "tunachain.png"
+    "Image": "tunachain.png",
+    "Type": "Rollup"
   },
   {
     "Name": "U Protocol",
@@ -557,7 +626,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "uBTC",
     "Founded": "",
-    "Image": "u-protocol.png"
+    "Image": "u-protocol.png",
+    "Type": "Rollup"
   },
   {
     "Name": "ZeroSync",
@@ -565,7 +635,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "2022",
-    "Image": "zerosync.png"
+    "Image": "zerosync.png",
+    "Type": "Rollup"
   },
   {
     "Name": "zkBase",
@@ -573,7 +644,8 @@
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "2020",
-    "Image": "zkbase.png"
+    "Image": "zkbase.png",
+    "Type": "Rollup"
   },
   {
     "Name": "ZKSats",
@@ -581,7 +653,8 @@
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "",
-    "Image": "zksats.png"
+    "Image": "zksats.png",
+    "Type": "Rollup"
   },
   {
     "Name": "Zulu Network",
@@ -589,6 +662,16 @@
     "Network Stage": "Testnet",
     "Native Token": "ZULU",
     "Founded": "",
-    "Image": "zulu-network.png"
+    "Image": "zulu-network.png",
+    "Type": "Rollup"
+  },
+  {
+    "Name": "Lnfi Network",
+    "Category": "State Channel",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Founded": "2024",
+    "Image": "lnfi.png",
+    "Type": "Bitcoin Native"
   }
 ]
