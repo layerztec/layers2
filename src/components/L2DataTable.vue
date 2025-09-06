@@ -1,126 +1,39 @@
 <script setup>
-import {
-  ref, computed, onMounted, onUnmounted,
-} from 'vue';
-import layersData from '@/assets/data/layers-data.json';
+import { ref, onUnmounted } from 'vue';
 
-// Reactive data
-const tableData = ref([]);
-const searchTerm = ref('');
-const selectedCategory = ref('');
-const selectedType = ref('');
-const selectedNetworkStage = ref('');
-const loading = ref(true);
+// Props
+defineProps({
+  tableData: {
+    type: Array,
+    default: () => [],
+  },
+  filteredData: {
+    type: Array,
+    default: () => [],
+  },
+  groupedData: {
+    type: Object,
+    default: () => ({}),
+  },
+  loading: {
+    type: Boolean,
+    default: false,
+  },
+});
 
 // Modal state
 const isModalOpen = ref(false);
 const selectedProtocol = ref(null);
-
-// Get unique values for filters
-const categories = computed(() => {
-  const uniqueCategories = [...new Set(tableData.value.map((item) => item.Category).filter(Boolean))];
-  return uniqueCategories.sort();
-});
-
-const types = computed(() => {
-  const uniqueTypes = [...new Set(tableData.value.map((item) => item.Type).filter(Boolean))];
-  return uniqueTypes.sort();
-});
-
-const networkStages = computed(() => {
-  const uniqueStages = [...new Set(tableData.value.map((item) => item['Network Stage']).filter(Boolean))];
-  return uniqueStages.sort();
-});
-
-// Computed properties
-const filteredData = computed(() => {
-  let filtered = tableData.value;
-
-  // Apply search filter
-  if (searchTerm.value) {
-    filtered = filtered.filter((item) => Object.values(item).some((value) => {
-      if (!value) return false;
-      return value.toString().toLowerCase().includes(searchTerm.value.toLowerCase());
-    }));
-  }
-
-  // Apply category filter
-  if (selectedCategory.value) {
-    filtered = filtered.filter((item) => item.Category === selectedCategory.value);
-  }
-
-  // Apply type filter
-  if (selectedType.value) {
-    filtered = filtered.filter((item) => item.Type === selectedType.value);
-  }
-
-  // Apply network stage filter
-  if (selectedNetworkStage.value) {
-    filtered = filtered.filter((item) => item['Network Stage'] === selectedNetworkStage.value);
-  }
-
-  return filtered;
-});
-
-// Group filtered data by type
-const groupedData = computed(() => {
-  const groups = {};
-
-  filteredData.value.forEach((item) => {
-    const type = item.Type || 'Uncategorized';
-    if (!groups[type]) {
-      groups[type] = [];
-    }
-    groups[type].push(item);
-  });
-
-  // Sort groups by custom type order and sort items within each group by name
-  const typeOrder = ['Bitcoin Native', 'Rollup', 'Sidechain', 'Other'];
-  const sortedGroups = {};
-
-  typeOrder.forEach((type) => {
-    if (groups[type]) {
-      sortedGroups[type] = groups[type].sort((a, b) => a.Name.localeCompare(b.Name));
-    }
-  });
-
-  return sortedGroups;
-});
-
-// Load JSON data
-const loadData = async () => {
-  try {
-    // Use imported data directly instead of fetch
-    tableData.value = layersData;
-    loading.value = false;
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error loading data:', error);
-    loading.value = false;
-  }
-};
-
-// Clear all filters
-const clearFilters = () => {
-  searchTerm.value = '';
-  selectedCategory.value = '';
-  selectedType.value = '';
-  selectedNetworkStage.value = '';
-};
 
 // Handle image loading errors
 const handleImageError = (event) => {
   // Replace broken image with placeholder
   const { target } = event;
   target.style.display = 'none';
-  const placeholder = target.nextElementSibling;
-  if (placeholder) {
-    placeholder.style.display = 'flex';
-  }
 };
 
-// Get image URL for a protocol
-const getImageUrl = (imageName) => new URL(`../assets/data/img/${imageName}`, import.meta.url).href;
+// Get image URL
+const getImageUrl = (imageName) => `/src/assets/data/img/${imageName}`;
 
 // Modal functions
 const openModal = (protocol) => {
@@ -133,235 +46,160 @@ const closeModal = () => {
   selectedProtocol.value = null;
 };
 
-// Close modal on escape key
+// Handle keyboard events
 const handleKeydown = (event) => {
   if (event.key === 'Escape' && isModalOpen.value) {
     closeModal();
   }
 };
 
-// Lifecycle
 onMounted(() => {
-  loadData();
   document.addEventListener('keydown', handleKeydown);
 });
 
-// Cleanup
 onUnmounted(() => {
   document.removeEventListener('keydown', handleKeydown);
 });
 </script>
 
 <template>
-  <div class="w-full p-4">
-    <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
-      L2 Protocols
-    </h2>
+  <div>
+    <!-- Table Header (Fixed at top) -->
+    <div class="border border-b-0 border-[#e0e0e0] bg-white">
+      <div class="border-b border-[#e0e0e0] p-4">
+        <!-- Desktop Header -->
+        <div class="hidden items-center gap-4 lg:flex">
+          <div class="w-[300px]">
+            <div class="text-[13px] font-medium text-[#a4a4a4]">
+              Name
+            </div>
+          </div>
+          <div class="flex flex-1 justify-between">
+            <div class="text-[13px] font-medium text-[#a4a4a4]">
+              Stage
+            </div>
+            <div class="text-[13px] font-medium text-[#a4a4a4]">
+              Native token
+            </div>
+            <div class="text-[13px] font-medium text-[#a4a4a4]">
+              Founded
+            </div>
+          </div>
+        </div>
 
-    <!-- Search Input -->
-    <div class="mb-4">
-      <input
-        v-model="searchTerm"
-        type="text"
-        placeholder="Search protocols..."
-        class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400"
-      >
-    </div>
-
-    <!-- Filters -->
-    <div class="mb-6 flex flex-wrap gap-4">
-      <!-- Type Filter -->
-      <div class="min-w-48 flex-1">
-        <label class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
-          Type
-        </label>
-        <select
-          v-model="selectedType"
-          class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-        >
-          <option value="">
-            All Types
-          </option>
-          <option
-            v-for="type in types"
-            :key="type"
-            :value="type"
-          >
-            {{ type }}
-          </option>
-        </select>
-      </div>
-
-      <!-- Category Filter -->
-      <div class="min-w-48 flex-1">
-        <label class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
-          Category
-        </label>
-        <select
-          v-model="selectedCategory"
-          class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-        >
-          <option value="">
-            All Categories
-          </option>
-          <option
-            v-for="category in categories"
-            :key="category"
-            :value="category"
-          >
-            {{ category }}
-          </option>
-        </select>
-      </div>
-
-      <!-- Network Stage Filter -->
-      <div class="min-w-48 flex-1">
-        <label class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
-          Network Stage
-        </label>
-        <select
-          v-model="selectedNetworkStage"
-          class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-        >
-          <option value="">
-            All Stages
-          </option>
-          <option
-            v-for="stage in networkStages"
-            :key="stage"
-            :value="stage"
-          >
-            {{ stage }}
-          </option>
-        </select>
-      </div>
-
-      <!-- Clear Filters Button -->
-      <div class="flex items-end">
-        <button
-          class="rounded-lg bg-gray-500 px-4 py-2 text-white transition-colors duration-200 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700"
-          @click="clearFilters"
-        >
-          Clear Filters
-        </button>
+        <!-- Mobile Header -->
+        <div class="grid grid-cols-2 gap-4 lg:hidden">
+          <div class="text-[13px] font-medium text-[#a4a4a4]">
+            Name
+          </div>
+          <div class="text-right text-[13px] font-medium text-[#a4a4a4]">
+            Founded
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Grouped Table -->
-    <div class="space-y-6">
+    <!-- Table Content -->
+    <div class="space-y-0">
       <div
         v-for="(items, type) in groupedData"
         :key="type"
-        class="overflow-x-auto"
+        class="border border-t-0 border-[#e0e0e0]"
       >
         <!-- Type Section Header -->
-        <div class="mb-4 flex items-center justify-between pb-3">
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+        <div class="border-b border-[#e0e0e0] bg-[#f5f5f5] p-4">
+          <div class="text-[13px] font-medium text-[#a4a4a4]">
             {{ type }}
-            <span class="ml-3 rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-              {{ items.length }} {{ items.length === 1 ? 'protocol' : 'protocols' }}
-            </span>
-          </h3>
+          </div>
         </div>
 
-        <!-- Table for this type -->
-        <table
-          class="min-w-full rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800"
-        >
-          <thead
-            class="bg-gray-50 dark:bg-gray-700"
+        <!-- Table Rows -->
+        <div class="divide-y divide-[#e0e0e0]">
+          <div
+            v-for="(item, index) in items"
+            :key="index"
+            class="cursor-pointer p-4 transition-colors duration-200 hover:bg-gray-50"
+            @click="openModal(item)"
           >
-            <tr>
-              <!-- Logo Header -->
-              <th class="px-6 py-3 text-center text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
-                Logo
-              </th>
-
-              <!-- Name Header -->
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
-                Name
-              </th>
-
-              <!-- Category Header -->
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
-                Category
-              </th>
-
-              <!-- Network Stage Header -->
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
-                Network Stage
-              </th>
-
-              <!-- Native Token Header -->
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
-                Native Token
-              </th>
-
-              <!-- Founded Header -->
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
-                Founded
-              </th>
-            </tr>
-          </thead>
-          <tbody
-            class="
-              divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800
-            "
-          >
-            <tr
-              v-for="(item, index) in items"
-              :key="index"
-              class="
-                cursor-pointer transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-gray-700
-              "
-              @click="openModal(item)"
-            >
-              <!-- Logo Column -->
-              <td class="whitespace-nowrap px-6 py-4 text-center">
-                <div class="flex items-center justify-center">
+            <!-- Desktop Layout -->
+            <div class="hidden items-center gap-4 lg:flex">
+              <!-- Logo and Name -->
+              <div class="flex w-[300px] items-center gap-4">
+                <div class="flex size-11 items-center justify-center overflow-hidden rounded bg-gray-200">
                   <img
                     v-if="item.Image"
                     :src="getImageUrl(item.Image)"
                     :alt="`${item.Name} logo`"
-                    class="size-8 rounded-full object-cover"
+                    class="size-full object-cover"
                     @error="handleImageError"
                   >
                   <div
                     v-else
-                    class="flex size-8 items-center justify-center rounded-full bg-gray-200 text-xs text-gray-500 dark:bg-gray-600 dark:text-gray-400"
+                    class="text-xs text-gray-500"
                   >
                     ?
                   </div>
                 </div>
-              </td>
+                <div class="flex flex-col">
+                  <div class="text-[16px] font-medium text-[#333333]">
+                    {{ item.Name || '-' }}
+                  </div>
+                  <div class="text-[13px] text-[#a4a4a4]">
+                    {{ item.Category || '-' }}
+                  </div>
+                </div>
+              </div>
 
-              <!-- Name Column -->
-              <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
-                {{ item.Name || '-' }}
-              </td>
+              <!-- Data Columns -->
+              <div class="flex flex-1 justify-between">
+                <div class="text-[16px] text-[#333333]">
+                  {{ item['Network Stage'] || '-' }}
+                </div>
+                <div class="text-[16px] text-[#333333]">
+                  {{ item['Native Token'] || '-' }}
+                </div>
+                <div class="text-[16px] text-[#333333]">
+                  {{ item.Founded || '-' }}
+                </div>
+              </div>
+            </div>
 
-              <!-- Category Column -->
-              <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
-                {{ item.Category || '-' }}
-              </td>
-
-              <!-- Network Stage Column -->
-              <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
-                {{ item['Network Stage'] || '-' }}
-              </td>
-
-              <!-- Native Token Column -->
-              <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
-                {{ item['Native Token'] || '-' }}
-              </td>
+            <!-- Mobile Layout -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <!-- Logo and Name -->
+              <div class="flex flex-1 items-center gap-4">
+                <div class="flex size-11 items-center justify-center overflow-hidden rounded bg-gray-200">
+                  <img
+                    v-if="item.Image"
+                    :src="getImageUrl(item.Image)"
+                    :alt="`${item.Name} logo`"
+                    class="size-full object-cover"
+                    @error="handleImageError"
+                  >
+                  <div
+                    v-else
+                    class="text-xs text-gray-500"
+                  >
+                    ?
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-[16px] font-medium text-[#333333]">
+                    {{ item.Name || '-' }}
+                  </div>
+                  <div class="text-[13px] text-[#a4a4a4]">
+                    {{ item.Category || '-' }}
+                  </div>
+                </div>
+              </div>
 
               <!-- Founded Column -->
-              <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
+              <div class="text-right text-[16px] text-[#333333]">
                 {{ item.Founded || '-' }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -370,9 +208,7 @@ onUnmounted(() => {
       v-if="loading"
       class="py-8 text-center"
     >
-      <p
-        class="text-gray-500 dark:text-gray-400"
-      >
+      <p class="text-[#a4a4a4]">
         Loading data...
       </p>
     </div>
@@ -382,19 +218,9 @@ onUnmounted(() => {
       v-else-if="Object.keys(groupedData).length === 0"
       class="py-8 text-center"
     >
-      <p
-        class="text-gray-500 dark:text-gray-400"
-      >
+      <p class="text-[#a4a4a4]">
         No protocols found.
       </p>
-    </div>
-
-    <!-- Data Count -->
-    <div
-      v-else
-      class="mt-4 text-right text-sm text-gray-500 dark:text-gray-400"
-    >
-      Showing {{ filteredData.length }} of {{ tableData.length }} protocols
     </div>
 
     <!-- Protocol Details Modal -->
@@ -439,12 +265,12 @@ onUnmounted(() => {
                 v-if="selectedProtocol.Image"
                 :src="getImageUrl(selectedProtocol.Image)"
                 :alt="`${selectedProtocol.Name} logo`"
-                class="size-16 rounded-full object-cover"
+                class="size-16 rounded object-cover"
                 @error="handleImageError"
               >
               <div
                 v-else
-                class="flex size-16 items-center justify-center rounded-full bg-gray-200 text-2xl text-gray-500 dark:bg-gray-600 dark:text-gray-400"
+                class="flex size-16 items-center justify-center rounded bg-gray-200 text-2xl text-gray-500 dark:bg-gray-600 dark:text-gray-400"
               >
                 ?
               </div>
@@ -526,6 +352,14 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+/* Import IBM Plex Mono font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+/* Apply IBM Plex Mono to all text */
+* {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 /* Modal animations */
 .modal-enter-active,
 .modal-leave-active {

@@ -1,65 +1,285 @@
 <script setup>
-import useTheme from '@/composables/useTheme.js';
+import { ref, computed, onMounted } from 'vue';
 import L2DataTable from '@/components/L2DataTable.vue';
+import Logo from '@/components/Logo.vue';
 
-const { currentTheme, switchTheme } = useTheme();
+// Filter states
+const searchTerm = ref('');
+const selectedType = ref('');
+const selectedCategory = ref('');
+const selectedNetworkStage = ref('');
+
+// Data
+const tableData = ref([]);
+const loading = ref(true);
+
+// Computed properties for filters
+const types = computed(() => {
+  const uniqueTypes = [...new Set(tableData.value.map((item) => item.Type).filter(Boolean))];
+  return uniqueTypes.sort();
+});
+
+const categories = computed(() => {
+  const uniqueCategories = [...new Set(tableData.value.map((item) => item.Category).filter(Boolean))];
+  return uniqueCategories.sort();
+});
+
+const networkStages = computed(() => {
+  const uniqueStages = [...new Set(tableData.value.map((item) => item['Network Stage']).filter(Boolean))];
+  return uniqueStages.sort();
+});
+
+// Filtered data
+const filteredData = computed(() => {
+  let filtered = [...tableData.value];
+
+  // Apply search filter
+  if (searchTerm.value) {
+    const searchLower = searchTerm.value.toLowerCase();
+    filtered = filtered.filter((item) => item.Name?.toLowerCase().includes(searchLower)
+      || item.Category?.toLowerCase().includes(searchLower)
+      || item['Network Stage']?.toLowerCase().includes(searchLower)
+      || item['Native Token']?.toLowerCase().includes(searchLower)
+      || item.Founded?.toLowerCase().includes(searchLower));
+  }
+
+  // Apply type filter
+  if (selectedType.value) {
+    filtered = filtered.filter((item) => item.Type === selectedType.value);
+  }
+
+  // Apply category filter
+  if (selectedCategory.value) {
+    filtered = filtered.filter((item) => item.Category === selectedCategory.value);
+  }
+
+  // Apply network stage filter
+  if (selectedNetworkStage.value) {
+    filtered = filtered.filter((item) => item['Network Stage'] === selectedNetworkStage.value);
+  }
+
+  return filtered;
+});
+
+// Grouped data
+const groupedData = computed(() => {
+  const groups = {};
+  filteredData.value.forEach((item) => {
+    const type = item.Type || 'Uncategorized';
+    if (!groups[type]) {
+      groups[type] = [];
+    }
+    groups[type].push(item);
+  });
+
+  // Sort groups by custom type order and sort items within each group by name
+  const typeOrder = ['Bitcoin Native', 'Rollup', 'Sidechain', 'Other'];
+  const sortedGroups = {};
+  typeOrder.forEach((type) => {
+    if (groups[type]) {
+      sortedGroups[type] = groups[type].sort((a, b) => a.Name.localeCompare(b.Name));
+    }
+  });
+  return sortedGroups;
+});
+
+// Load data
+const loadData = async () => {
+  try {
+    loading.value = true;
+    const response = await fetch('/src/assets/data/layers-data.json');
+    const data = await response.json();
+    tableData.value = data;
+  } catch (error) {
+    // Handle error silently
+  } finally {
+    loading.value = false;
+  }
+};
+
+onMounted(() => {
+  loadData();
+});
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50 transition-colors duration-200 dark:bg-gray-900">
-    <!-- Header with theme toggle -->
-    <header class="absolute inset-x-0 top-0 z-10">
-      <div class="container mx-auto flex justify-end p-4">
-        <button
-          class="rounded-lg bg-white p-2 shadow-lg transition-all duration-200 hover:shadow-xl dark:bg-gray-800"
-          :title="currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
-          @click="switchTheme()"
-        >
-          <svg
-            v-if="currentTheme === 'dark'"
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-6 text-yellow-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <svg
-            v-else
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </button>
+  <div class="min-h-screen bg-white">
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 h-[70px] border-b border-[#e0e0e0] bg-white">
+      <div class="flex h-full items-center px-6">
+        <div class="flex flex-col">
+          <Logo />
+          <div class="mt-1 text-[11px] text-[#a4a4a4]">
+            Track bitcoin layers 2 projects
+          </div>
+        </div>
       </div>
     </header>
 
-    <!-- Main content -->
-    <main class="container mx-auto px-4 py-16 pt-24">
-      <div class="mx-auto max-w-7xl">
-        <div class="mb-12 text-center">
-          <h1 class="mb-8 text-5xl font-bold text-gray-900 dark:text-white md:text-6xl">
-            Bitcoin Layers 2
-          </h1>
-          <p class="mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300">
-            A comprehensive directory of Bitcoin Layer 2 scaling solutions and protocols
-          </p>
+    <div class="flex">
+      <!-- Desktop Sidebar (hidden on mobile) -->
+      <aside class="hidden lg:fixed lg:left-0 lg:top-[70px] lg:block lg:h-[calc(100vh-70px)] lg:w-[230px] lg:overflow-y-auto lg:border-r lg:border-[#e0e0e0] lg:bg-white">
+        <div class="space-y-4 p-4">
+          <!-- Type Filter -->
+          <div class="space-y-0.5">
+            <div class="px-2 py-1 text-[11px] font-medium text-[#a4a4a4]">
+              Type
+            </div>
+            <div
+              v-for="type in types"
+              :key="type"
+              :class="[
+                'cursor-pointer rounded px-2 py-1 text-[13px] font-semibold transition-colors',
+                selectedType === type
+                  ? 'bg-[#f5f5f5] text-[#333333]'
+                  : 'text-[#333333] hover:bg-gray-50'
+              ]"
+              @click="selectedType = selectedType === type ? '' : type"
+            >
+              {{ type }}
+            </div>
+          </div>
+
+          <!-- Category Filter -->
+          <div class="space-y-0.5">
+            <div class="px-2 py-1 text-[11px] font-medium text-[#a4a4a4]">
+              Category
+            </div>
+            <div
+              v-for="category in categories"
+              :key="category"
+              :class="[
+                'cursor-pointer rounded px-2 py-1 text-[13px] font-semibold transition-colors',
+                selectedCategory === category
+                  ? 'bg-[#f5f5f5] text-[#333333]'
+                  : 'text-[#333333] hover:bg-gray-50'
+              ]"
+              @click="selectedCategory = selectedCategory === category ? '' : category"
+            >
+              {{ category }}
+            </div>
+          </div>
+
+          <!-- Stage Filter -->
+          <div class="space-y-0.5">
+            <div class="px-2 py-1 text-[11px] font-medium text-[#a4a4a4]">
+              Stage
+            </div>
+            <div
+              v-for="stage in networkStages"
+              :key="stage"
+              :class="[
+                'cursor-pointer rounded px-2 py-1 text-[13px] font-semibold transition-colors',
+                selectedNetworkStage === stage
+                  ? 'bg-[#f5f5f5] text-[#333333]'
+                  : 'text-[#333333] hover:bg-gray-50'
+              ]"
+              @click="selectedNetworkStage = selectedNetworkStage === stage ? '' : stage"
+            >
+              {{ stage }}
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 lg:ml-[230px]">
+        <!-- Fixed Search Bar -->
+        <div class="sticky top-[70px] z-40 flex h-[70px] items-center border-b border-[#e0e0e0] bg-white px-6">
+          <input
+            v-model="searchTerm"
+            type="text"
+            placeholder="Search projects..."
+            class="w-full text-[16px] text-[#a4a4a4] placeholder:text-[#a4a4a4] focus:outline-none"
+          >
         </div>
 
-        <!-- Data Table -->
-        <L2DataTable />
-      </div>
-    </main>
+        <!-- Mobile Filter Select Boxes (visible only on mobile) -->
+        <div class="border-b border-[#e0e0e0] bg-white p-4 lg:hidden">
+          <div class="flex gap-2">
+            <!-- Type Filter -->
+            <select
+              v-model="selectedType"
+              class="flex-1 rounded bg-[#f5f5f5] px-2 py-1 text-[13px] font-semibold text-[#333333] focus:outline-none"
+            >
+              <option value="">
+                All types
+              </option>
+              <option
+                v-for="type in types"
+                :key="type"
+                :value="type"
+              >
+                {{ type }}
+              </option>
+            </select>
+
+            <!-- Category Filter -->
+            <select
+              v-model="selectedCategory"
+              class="flex-1 rounded bg-[#f5f5f5] px-2 py-1 text-[13px] font-semibold text-[#333333] focus:outline-none"
+            >
+              <option value="">
+                All categories
+              </option>
+              <option
+                v-for="category in categories"
+                :key="category"
+                :value="category"
+              >
+                {{ category }}
+              </option>
+            </select>
+
+            <!-- Stage Filter -->
+            <select
+              v-model="selectedNetworkStage"
+              class="flex-1 rounded bg-[#f5f5f5] px-2 py-1 text-[13px] font-semibold text-[#333333] focus:outline-none"
+            >
+              <option value="">
+                All stages
+              </option>
+              <option
+                v-for="stage in networkStages"
+                :key="stage"
+                :value="stage"
+              >
+                {{ stage }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="p-6">
+          <div class="mb-6">
+            <h1 class="mb-1 text-[16px] font-medium text-[#333333]">
+              Projects
+            </h1>
+            <p class="text-[11px] text-[#a4a4a4]">
+              Showing {{ filteredData.length }} of {{ tableData.length }} protocols
+            </p>
+          </div>
+
+          <!-- Data Table Component -->
+          <L2DataTable
+            :table-data="tableData"
+            :filtered-data="filteredData"
+            :grouped-data="groupedData"
+            :loading="loading"
+          />
+        </div>
+      </main>
+    </div>
   </div>
 </template>
 
 <style scoped>
-/* Custom styles can be added here */
+/* Import IBM Plex Mono font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+/* Apply IBM Plex Mono to all text */
+* {
+  font-family: 'IBM Plex Mono', monospace;
+}
 </style>
