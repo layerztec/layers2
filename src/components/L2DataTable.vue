@@ -37,7 +37,7 @@ const getImageUrl = (imageName) => {
   try {
     return new URL(`../assets/data/img/${imageName}`, import.meta.url).href;
   } catch (error) {
-    console.error('Failed to load image:', imageName, error);
+    // Handle error silently
     return '';
   }
 };
@@ -172,10 +172,10 @@ onUnmounted(() => {
             </div>
 
             <!-- Mobile Layout -->
-            <div class="flex items-center gap-4 lg:hidden">
+            <div class="flex items-center gap-3 lg:hidden">
               <!-- Logo and Name -->
-              <div class="flex flex-1 items-center gap-4">
-                <div class="flex size-11 items-center justify-center overflow-hidden rounded bg-gray-200">
+              <div class="flex min-w-0 flex-1 items-center gap-3">
+                <div class="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded bg-gray-200">
                   <img
                     v-if="item.Image"
                     :src="getImageUrl(item.Image)"
@@ -190,18 +190,18 @@ onUnmounted(() => {
                     ?
                   </div>
                 </div>
-                <div class="flex flex-col">
-                  <div class="text-[16px] font-medium text-[#333333]">
+                <div class="flex min-w-0 flex-1 flex-col">
+                  <div class="truncate text-[14px] font-medium text-[#333333]">
                     {{ item.Name || '-' }}
                   </div>
-                  <div class="text-[13px] text-[#a4a4a4]">
+                  <div class="truncate text-[11px] text-[#a4a4a4]">
                     {{ item.Category || '-' }}
                   </div>
                 </div>
               </div>
 
               <!-- Founded Column -->
-              <div class="text-right text-[16px] text-[#333333]">
+              <div class="shrink-0 text-right text-[12px] text-[#333333]">
                 {{ item.Founded || '-' }}
               </div>
             </div>

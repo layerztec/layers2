@@ -90,7 +90,7 @@ const loadData = async () => {
     const data = await import('@/assets/data/layers-data.json');
     tableData.value = data.default;
   } catch (error) {
-    console.error('Failed to load data:', error);
+    // Handle error silently
   } finally {
     loading.value = false;
   }
@@ -102,7 +102,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-white">
+  <div class="min-h-screen max-w-full overflow-x-hidden bg-white">
     <!-- Sticky Header -->
     <header class="sticky top-0 z-50 h-[70px] border-b border-[#e0e0e0] bg-white">
       <div class="flex h-full items-center px-6">
@@ -194,12 +194,12 @@ onMounted(() => {
         </div>
 
         <!-- Mobile Filter Select Boxes (visible only on mobile) -->
-        <div class="border-b border-[#e0e0e0] bg-white p-4 lg:hidden">
-          <div class="flex gap-2">
+        <div class="border-b border-[#e0e0e0] bg-white p-3 lg:hidden">
+          <div class="grid grid-cols-1 gap-2">
             <!-- Type Filter -->
             <select
               v-model="selectedType"
-              class="flex-1 rounded bg-[#f5f5f5] px-2 py-1 text-[13px] font-semibold text-[#333333] focus:outline-none"
+              class="w-full rounded bg-[#f5f5f5] p-2 text-[12px] font-semibold text-[#333333] focus:outline-none"
             >
               <option value="">
                 All types
@@ -216,7 +216,7 @@ onMounted(() => {
             <!-- Category Filter -->
             <select
               v-model="selectedCategory"
-              class="flex-1 rounded bg-[#f5f5f5] px-2 py-1 text-[13px] font-semibold text-[#333333] focus:outline-none"
+              class="w-full rounded bg-[#f5f5f5] p-2 text-[12px] font-semibold text-[#333333] focus:outline-none"
             >
               <option value="">
                 All categories
@@ -233,7 +233,7 @@ onMounted(() => {
             <!-- Stage Filter -->
             <select
               v-model="selectedNetworkStage"
-              class="flex-1 rounded bg-[#f5f5f5] px-2 py-1 text-[13px] font-semibold text-[#333333] focus:outline-none"
+              class="w-full rounded bg-[#f5f5f5] p-2 text-[12px] font-semibold text-[#333333] focus:outline-none"
             >
               <option value="">
                 All stages
@@ -250,15 +250,15 @@ onMounted(() => {
         </div>
 
         <!-- Content Area -->
-        <div class="p-6">
+        <div class="p-4 lg:p-6">
           <div class="mb-6">
             <h1 class="mb-1 text-[16px] font-medium text-[#333333]">
               Projects
-          </h1>
+            </h1>
             <p class="text-[11px] text-[#a4a4a4]">
               Showing {{ filteredData.length }} of {{ tableData.length }} protocols
-          </p>
-        </div>
+            </p>
+          </div>
 
           <!-- Data Table Component -->
           <L2DataTable
@@ -267,8 +267,8 @@ onMounted(() => {
             :grouped-data="groupedData"
             :loading="loading"
           />
-      </div>
-    </main>
+        </div>
+      </main>
     </div>
   </div>
 </template>
@@ -280,5 +280,13 @@ onMounted(() => {
 /* Apply IBM Plex Mono to all text */
 * {
   font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Mobile overflow prevention */
+@media (width <= 1023px) {
+  .mobile-text {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
 }
 </style>
