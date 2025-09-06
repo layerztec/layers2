@@ -87,7 +87,7 @@ const groupedData = computed(() => {
 const loadData = async () => {
   try {
     loading.value = true;
-    const response = await fetch('/src/assets/data/layers-data.json');
+    const response = await fetch('./layers-data.json');
     const data = await response.json();
     tableData.value = data;
   } catch (error) {

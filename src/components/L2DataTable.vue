@@ -33,7 +33,7 @@ const handleImageError = (event) => {
 };
 
 // Get image URL
-const getImageUrl = (imageName) => `/src/assets/data/img/${imageName}`;
+const getImageUrl = (imageName) => `./img/${imageName}`;
 
 // Modal functions
 const openModal = (protocol) => {
