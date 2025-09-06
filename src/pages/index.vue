@@ -102,7 +102,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen max-w-full overflow-x-hidden bg-white">
+  <div class="min-h-screen bg-white">
     <!-- Sticky Header -->
     <header class="sticky top-0 z-50 h-[70px] border-b border-[#e0e0e0] bg-white">
       <div class="flex h-full items-center px-6">
@@ -284,6 +284,10 @@ onMounted(() => {
 
 /* Mobile overflow prevention */
 @media (width <= 1023px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .mobile-text {
     word-break: break-word;
     overflow-wrap: break-word;
