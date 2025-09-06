@@ -33,7 +33,14 @@ const handleImageError = (event) => {
 };
 
 // Get image URL
-const getImageUrl = (imageName) => `./img/${imageName}`;
+const getImageUrl = (imageName) => {
+  try {
+    return new URL(`../assets/data/img/${imageName}`, import.meta.url).href;
+  } catch (error) {
+    console.error('Failed to load image:', imageName, error);
+    return '';
+  }
+};
 
 // Modal functions
 const openModal = (protocol) => {

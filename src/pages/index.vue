@@ -87,11 +87,10 @@ const groupedData = computed(() => {
 const loadData = async () => {
   try {
     loading.value = true;
-    const response = await fetch('./layers-data.json');
-    const data = await response.json();
-    tableData.value = data;
+    const data = await import('@/assets/data/layers-data.json');
+    tableData.value = data.default;
   } catch (error) {
-    // Handle error silently
+    console.error('Failed to load data:', error);
   } finally {
     loading.value = false;
   }
@@ -255,11 +254,11 @@ onMounted(() => {
           <div class="mb-6">
             <h1 class="mb-1 text-[16px] font-medium text-[#333333]">
               Projects
-            </h1>
+          </h1>
             <p class="text-[11px] text-[#a4a4a4]">
               Showing {{ filteredData.length }} of {{ tableData.length }} protocols
-            </p>
-          </div>
+          </p>
+        </div>
 
           <!-- Data Table Component -->
           <L2DataTable
@@ -268,8 +267,8 @@ onMounted(() => {
             :grouped-data="groupedData"
             :loading="loading"
           />
-        </div>
-      </main>
+      </div>
+    </main>
     </div>
   </div>
 </template>
