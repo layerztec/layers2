@@ -359,13 +359,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-/* Import IBM Plex Mono font */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
-
-/* Apply IBM Plex Mono to all text */
-* {
-  font-family: 'IBM Plex Mono', monospace;
-}
 
 /* Modal animations */
 .modal-enter-active,

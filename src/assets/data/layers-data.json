@@ -28,7 +28,7 @@
   },
   {
     "Name": "Ark",
-    "Category": "State Channel",
+    "Category": "Virtual UTXOs",
     "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "2023",
@@ -672,6 +672,15 @@
     "Native Token": "BTC",
     "Founded": "2024",
     "Image": "lnfi.png",
+    "Type": "Bitcoin Native"
+  },
+  {
+    "Name": "Lygos Finance",
+    "Category": "DLCs",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Founded": "2025",
+    "Image": "lygos-finance.png",
     "Type": "Bitcoin Native"
   }
 ]
