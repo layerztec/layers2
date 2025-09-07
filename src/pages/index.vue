@@ -20,7 +20,7 @@ const loading = ref(true);
 const types = computed(() => {
   const uniqueTypes = [...new Set(tableData.value.map((item) => item.Type).filter(Boolean))];
   // Use the same custom order as the table
-  const typeOrder = ['Bitcoin Native', 'Rollup', 'Sidechain', 'Other'];
+  const typeOrder = ['Bitcoin Native', 'Rollup', 'Sidechain', 'Meta Protocols', 'Other'];
   return typeOrder.filter((type) => uniqueTypes.includes(type));
 });
 
@@ -78,7 +78,7 @@ const groupedData = computed(() => {
   });
 
   // Sort groups by custom type order and sort items within each group by name
-  const typeOrder = ['Bitcoin Native', 'Rollup', 'Sidechain', 'Other'];
+  const typeOrder = ['Bitcoin Native', 'Rollup', 'Sidechain', 'Meta Protocols', 'Other'];
   const sortedGroups = {};
   typeOrder.forEach((type) => {
     if (groups[type]) {

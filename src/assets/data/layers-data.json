@@ -31,16 +31,18 @@
     "Category": "Virtual UTXOs",
     "Network Stage": "Testnet",
     "Native Token": "BTC",
-    "Founded": "2023",
+    "Founded": "2024",
     "Image": "ark.png",
-    "Type": "Bitcoin Native"
+    "Type": "Bitcoin Native",
+    "Funding": "2,500,000",
+    "Link": "https://arklabs.xyz/"
   },
   {
     "Name": "B² Network",
-    "Category": "Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Testnet",
     "Native Token": "BSQ",
-    "Founded": "",
+    "Founded": "2022",
     "Image": "b-network.png",
     "Type": "Rollup"
   },
@@ -73,10 +75,10 @@
   },
   {
     "Name": "Bison",
-    "Category": "Rollup",
+    "Category": "Sovereign Rollup",
     "Network Stage": "Testnet",
     "Native Token": "BTC",
-    "Founded": "",
+    "Founded": "2023",
     "Image": "bison.png",
     "Type": "Rollup"
   },
@@ -148,9 +150,10 @@
     "Category": "Rollup",
     "Network Stage": "Pre-Testnet",
     "Native Token": "BTC",
-    "Founded": "",
+    "Founded": "2023",
     "Image": "bitsmiley.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Funding": "10,000,000"
   },
   {
     "Name": "BL2",
@@ -175,9 +178,10 @@
     "Category": "Rollup",
     "Network Stage": "Testnet",
     "Native Token": "",
-    "Founded": "",
+    "Founded": "2023",
     "Image": "bob.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Funding": "21,000,000"
   },
   {
     "Name": "Bool Network",
@@ -217,12 +221,14 @@
   },
   {
     "Name": "Citrea",
-    "Category": "Rollup",
+    "Category": "Sovereign Rollup",
     "Network Stage": "Pre-Testnet",
-    "Native Token": "BTC",
-    "Founded": "",
+    "Native Token": "cBTC",
+    "Founded": "2023",
     "Image": "citrea.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Funding": "16,000,000",
+    "Link": "https://citrea.xyz/"
   },
   {
     "Name": "Conflux",
@@ -388,12 +394,14 @@
   },
   {
     "Name": "Merlin Chain",
-    "Category": "Sidechain",
+    "Category": "Zk-rollup",
     "Network Stage": "Mainnet",
-    "Native Token": "",
+    "Native Token": "MERL",
     "Founded": "2023",
+    "Funding": "1,500,000",
     "Image": "merlin-chain.png",
-    "Type": "Sidechain"
+    "Type": "Rollup",
+    "Link": "https://merlinchain.io/"
   },
   {
     "Name": "Mintlayer",
@@ -460,12 +468,14 @@
   },
   {
     "Name": "QED Protocol",
-    "Category": "Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
-    "Founded": "StarkWare",
+    "Founded": "2023",
+    "Funding": "9,000,000",
     "Image": "qed-protocol.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Link": "https://qedprotocol.com/"
   },
   {
     "Name": "RGB",
@@ -560,20 +570,24 @@
   {
     "Name": "Side Protocol",
     "Category": "Sidechain",
-    "Network Stage": "Pre-Testnet",
-    "Native Token": "BTC",
-    "Founded": "",
+    "Network Stage": "Testnet",
+    "Native Token": "sBTC",
+    "Founded": "2021",
+    "Funding": "30,000,000",
     "Image": "side-protocol.png",
-    "Type": "Sidechain"
+    "Type": "Sidechain",
+    "Link": "https://side.one/"
   },
   {
     "Name": "Sovryn",
-    "Category": "Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Mainnet",
     "Native Token": "RBTC",
-    "Founded": "",
+    "Founded": "2020",
     "Image": "sovryn.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Funding": "",
+    "Link": "https://sovryn.com/"
   },
   {
     "Name": "Spark",
@@ -582,7 +596,9 @@
     "Native Token": "BTC",
     "Founded": "2022",
     "Image": "spark.png",
-    "Type": "Bitcoin Native"
+    "Type": "Bitcoin Native",
+    "Funding": "170,000,000",
+    "Link": "https://spark.money"
   },
   {
     "Name": "Stacks",
@@ -613,21 +629,14 @@
   },
   {
     "Name": "TunaChain",
-    "Category": "Rollup",
+    "Category": "Optimistic Rollup",
     "Network Stage": "Pre-Testnet",
     "Native Token": "TUNA",
-    "Founded": "",
+    "Founded": "2023",
     "Image": "tunachain.png",
-    "Type": "Rollup"
-  },
-  {
-    "Name": "U Protocol",
-    "Category": "Rollup",
-    "Network Stage": "Mainnet",
-    "Native Token": "uBTC",
-    "Founded": "",
-    "Image": "u-protocol.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Funding": "8,900,000",
+    "Link": "https://tunachain.io/"
   },
   {
     "Name": "ZeroSync",
@@ -640,7 +649,7 @@
   },
   {
     "Name": "zkBase",
-    "Category": "Rollup",
+    "Category": "zkEVM",
     "Network Stage": "Pre-Testnet",
     "Native Token": "",
     "Founded": "2020",
@@ -648,22 +657,15 @@
     "Type": "Rollup"
   },
   {
-    "Name": "ZKSats",
-    "Category": "Rollup",
-    "Network Stage": "Mainnet",
-    "Native Token": "BTC",
-    "Founded": "",
-    "Image": "zksats.png",
-    "Type": "Rollup"
-  },
-  {
     "Name": "Zulu Network",
-    "Category": "Rollup",
+    "Category": "zkEVM",
     "Network Stage": "Testnet",
     "Native Token": "ZULU",
-    "Founded": "",
+    "Founded": "2023",
+    "Funding": "3,000,000",
     "Image": "zulu-network.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Link": "https://zulunetwork.io/"
   },
   {
     "Name": "Lnfi Network",
@@ -682,5 +684,55 @@
     "Founded": "2025",
     "Image": "lygos-finance.png",
     "Type": "Bitcoin Native"
+  },
+  {
+    "Name": "BTKN (Spark)",
+    "Category": "Keys",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Founded": "2024",
+    "Image": "btkn-spark.png",
+    "Type": "Meta Protocols",
+    "Link": "https://docs.spark.money/lrc20/hello-btkn"
+  },
+  {
+    "Name": "Runes",
+    "Category": "Op_Return",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Founded": "2024",
+    "Image": "runes.png",
+    "Type": "Meta Protocols",
+    "Link": "https://docs.ordinals.com/runes.html"
+  },
+  {
+    "Name": "Alkanes",
+    "Category": "Witness",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Founded": "2024",
+    "Image": "alkanes.png",
+    "Type": "Meta Protocols",
+    "Link": "https://alkanes-docs.vercel.app/"
+  },
+  {
+    "Name": "Ordinals",
+    "Category": "Witness",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Founded": "2023",
+    "Image": "ordinals.png",
+    "Type": "Meta Protocols",
+    "Link": "https://docs.ordinals.com/"
+  },
+  {
+    "Name": "BRC-20",
+    "Category": "Witness",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Founded": "2023",
+    "Image": "brc-20.png",
+    "Type": "Meta Protocols",
+    "Link": "https://brc20.com/"
   }
 ]
