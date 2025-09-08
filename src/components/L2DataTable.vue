@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onUnmounted } from 'vue';
+// No imports needed for this component
 
 // Props
 defineProps({
@@ -21,9 +21,8 @@ defineProps({
   },
 });
 
-// Modal state
-const isModalOpen = ref(false);
-const selectedProtocol = ref(null);
+// Emits
+const emit = defineEmits(['open-modal']);
 
 // Handle image loading errors
 const handleImageError = (event) => {
@@ -42,31 +41,10 @@ const getImageUrl = (imageName) => {
   }
 };
 
-// Modal functions
-const openModal = (protocol) => {
-  selectedProtocol.value = protocol;
-  isModalOpen.value = true;
+// Handle row click
+const handleRowClick = (protocol) => {
+  emit('open-modal', protocol);
 };
-
-const closeModal = () => {
-  isModalOpen.value = false;
-  selectedProtocol.value = null;
-};
-
-// Handle keyboard events
-const handleKeydown = (event) => {
-  if (event.key === 'Escape' && isModalOpen.value) {
-    closeModal();
-  }
-};
-
-onMounted(() => {
-  document.addEventListener('keydown', handleKeydown);
-});
-
-onUnmounted(() => {
-  document.removeEventListener('keydown', handleKeydown);
-});
 </script>
 
 <template>
@@ -126,7 +104,7 @@ onUnmounted(() => {
             v-for="(item, index) in items"
             :key="index"
             class="cursor-pointer p-4 transition-colors duration-200 hover:bg-gray-50"
-            @click="openModal(item)"
+            @click="handleRowClick(item)"
           >
             <!-- Desktop Layout -->
             <div class="hidden items-center gap-4 lg:flex">
@@ -159,13 +137,13 @@ onUnmounted(() => {
 
               <!-- Data Columns -->
               <div class="flex flex-1 justify-between">
-                <div class="text-[16px] text-[#333333]">
+                <div class="text-[13px] font-medium text-[#333333]">
                   {{ item['Network Stage'] || '-' }}
                 </div>
-                <div class="text-[16px] text-[#333333]">
+                <div class="text-[13px] font-medium text-[#333333]">
                   {{ item['Native Token'] || '-' }}
                 </div>
-                <div class="text-[16px] text-[#333333]">
+                <div class="text-[13px] font-medium text-[#333333]">
                   {{ item.Founded || '-' }}
                 </div>
               </div>
@@ -201,7 +179,7 @@ onUnmounted(() => {
               </div>
 
               <!-- Founded Column -->
-              <div class="shrink-0 text-right text-[12px] text-[#333333]">
+              <div class="shrink-0 text-right text-[13px] font-medium text-[#333333]">
                 {{ item.Founded || '-' }}
               </div>
             </div>
@@ -229,197 +207,9 @@ onUnmounted(() => {
         No protocols found.
       </p>
     </div>
-
-    <!-- Protocol Details Modal -->
-    <div
-      v-if="isModalOpen"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
-      @click="closeModal"
-    >
-      <div
-        class="relative mx-4 w-full max-w-2xl rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800"
-        @click.stop
-      >
-        <!-- Close Button -->
-        <button
-          class="absolute right-4 top-4 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300"
-          @click="closeModal"
-        >
-          <svg
-            class="size-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-
-        <!-- Modal Content -->
-        <div
-          v-if="selectedProtocol"
-          class="space-y-6"
-        >
-          <!-- Header with Logo and Name -->
-          <div class="flex items-center space-x-4">
-            <div class="shrink-0">
-              <img
-                v-if="selectedProtocol.Image"
-                :src="getImageUrl(selectedProtocol.Image)"
-                :alt="`${selectedProtocol.Name} logo`"
-                class="size-16 rounded object-cover"
-                @error="handleImageError"
-              >
-              <div
-                v-else
-                class="flex size-16 items-center justify-center rounded bg-gray-200 text-2xl text-gray-500 dark:bg-gray-600 dark:text-gray-400"
-              >
-                ?
-              </div>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                {{ selectedProtocol.Name }}
-              </h3>
-              <div class="mt-1 flex items-center space-x-2">
-                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                  {{ selectedProtocol.Type }}
-                </span>
-                <span class="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-                  {{ selectedProtocol.Category }}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Details Grid -->
-          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <!-- Network Stage -->
-            <div class="space-y-2">
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                Network Stage
-              </h4>
-              <p class="text-lg text-gray-900 dark:text-white">
-                {{ selectedProtocol['Network Stage'] || 'Not specified' }}
-              </p>
-            </div>
-
-            <!-- Native Token -->
-            <div class="space-y-2">
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                Native Token
-              </h4>
-              <p class="text-lg text-gray-900 dark:text-white">
-                {{ selectedProtocol['Native Token'] || 'Not specified' }}
-              </p>
-            </div>
-
-            <!-- Founded -->
-            <div class="space-y-2">
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                Founded
-              </h4>
-              <p class="text-lg text-gray-900 dark:text-white">
-                {{ selectedProtocol.Founded || 'Not specified' }}
-              </p>
-            </div>
-
-            <!-- Type -->
-            <div class="space-y-2">
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                Type
-              </h4>
-              <p class="text-lg text-gray-900 dark:text-white">
-                {{ selectedProtocol.Type || 'Not specified' }}
-              </p>
-            </div>
-
-            <!-- Funding -->
-            <div
-              v-if="selectedProtocol.Funding"
-              class="space-y-2"
-            >
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                Funding
-              </h4>
-              <p class="text-lg text-gray-900 dark:text-white">
-                ${{ selectedProtocol.Funding }}
-              </p>
-            </div>
-          </div>
-
-          <!-- Additional Info -->
-          <div
-            v-if="selectedProtocol.Category"
-            class="space-y-2"
-          >
-            <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-              Category
-            </h4>
-            <p class="text-lg text-gray-900 dark:text-white">
-              {{ selectedProtocol.Category }}
-            </p>
-          </div>
-
-          <!-- Visit Project Button -->
-          <div
-            v-if="selectedProtocol.Link"
-            class="pt-4"
-          >
-            <a
-              :href="selectedProtocol.Link"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center rounded bg-[#f5f5f5] px-4 py-2 text-[13px] font-semibold text-black transition-colors hover:bg-[#00000020]"
-            >
-              Visit project
-              <svg
-                class="ml-2 size-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <style scoped>
-
-/* Modal animations */
-.modal-enter-active,
-.modal-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.modal-enter-from,
-.modal-leave-to {
-  opacity: 0;
-}
-
-.modal-content-enter-active,
-.modal-content-leave-active {
-  transition: all 0.3s ease;
-}
-
-.modal-content-enter-from,
-.modal-content-leave-to {
-  transform: scale(0.9);
-  opacity: 0;
-}
+/* Table-specific styles can be added here if needed */
 </style>

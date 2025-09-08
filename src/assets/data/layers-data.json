@@ -1,17 +1,19 @@
 [
   {
-    "Name": "AIL2",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
-    "Native Token": "",
+    "Name": "Ailayer",
+    "Category": "Anchored Chain",
+    "Network Stage": "Testnet",
+    "Description": "An EVM-compatible Bitcoin Layer 2 that uses inscriptions as gas. It also incorporates AI-driven modular architecture, leveraging mining incentives to manage a shared AI training.",
+    "Native Token": "AIL",
     "Founded": "2023",
     "Image": "ail2.png",
-    "Type": "Rollup"
+    "Type": "Sidechain"
   },
   {
     "Name": "Alpen Labs",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
+    "Category": "Zk-rollup",
+    "Network Stage": "Testnet",
+    "Description": "Alpen Labs is a Bitcoin Layer‑2 ZK-rollup (Strata) enabling scalable payments, lending, stablecoins, and smart contracts with privacy and programmability.",
     "Native Token": "",
     "Founded": "2022",
     "Image": "alpen-labs.png",
@@ -20,7 +22,7 @@
   {
     "Name": "Anduro",
     "Category": "Sidechain",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "",
     "Image": "anduro.png",
@@ -34,22 +36,24 @@
     "Founded": "2024",
     "Image": "ark.png",
     "Type": "Bitcoin Native",
-    "Funding": "2,500,000",
+    "Description": "Ark enables instant, private Bitcoin payments through virtual UTXOs without requiring on-chain transactions or Lightning channels.",
     "Link": "https://arklabs.xyz/"
   },
   {
     "Name": "B² Network",
     "Category": "Zk-rollup",
-    "Network Stage": "Testnet",
+    "Network Stage": "Mainnet",
     "Native Token": "BSQ",
     "Founded": "2022",
     "Image": "b-network.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Description": "B² Network is an EVM-compatible Bitcoin Layer 2 solution using zero-knowledge rollup technology. It features B² Rollup for smart contracts and B² Hub as Bitcoin's data availability layer, achieving high scalability while maintaining Bitcoin's security.",
+    "Link": "https://www.bsquared.network/"
   },
   {
     "Name": "Babylon",
     "Category": "Sidechain",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "",
     "Image": "babylon.png",
@@ -66,7 +70,7 @@
   },
   {
     "Name": "Biop",
-    "Category": "Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Mainnet",
     "Native Token": "BIOP",
     "Founded": "2023",
@@ -75,35 +79,27 @@
   },
   {
     "Name": "Bison",
-    "Category": "Sovereign Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "2023",
     "Image": "bison.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Description": "Bison Network is a sovereign rollup using ZK-STARK technology with Bitcoin as its data availability layer. It enables EVM-compatible smart contracts and achieves up to 2,200 TPS with significantly lower fees than Bitcoin."
   },
   {
-    "Name": "Bitcoin Virtual Machine",
-    "Category": "Rollup",
+    "Name": "BVM",
+    "Category": "Federation",
     "Network Stage": "Mainnet",
     "Native Token": "BVM",
     "Founded": "2023",
     "Image": "bitcoin-virtual-machine.png",
-    "Type": "Rollup"
-  },
-  {
-    "Name": "BitcoinVM",
-    "Category": "Rollup",
-    "Network Stage": "Testnet",
-    "Native Token": "BTC",
-    "Founded": "2023",
-    "Image": "bitcoinvm.png",
-    "Type": "Rollup"
+    "Type": "Sidechain"
   },
   {
     "Name": "Bitcredit Protocol",
     "Category": "Credit mint",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "brc-BTC",
     "Founded": "2022",
     "Image": "bitcredit-protocol.png",
@@ -120,77 +116,47 @@
   },
   {
     "Name": "BitLayer",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
-    "Native Token": "",
-    "Founded": "2023",
+    "Category": "Zk-rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "YBTC",
+    "Founded": "2024",
     "Image": "bitlayer.png",
-    "Type": "Rollup"
-  },
-  {
-    "Name": "BitReXe",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
-    "Native Token": "rxBTC",
-    "Founded": "2023",
-    "Image": "bitrexe.png",
-    "Type": "Rollup"
-  },
-  {
-    "Name": "Bitsat",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
-    "Native Token": "",
-    "Founded": "2023",
-    "Image": "bitsat.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Description": "BitLayer is a Bitcoin Layer 2 network based on BitVM, supporting multiple virtual machines and EVM compatibility for enhanced Bitcoin scalability and smart contract functionality.",
+    "Link": "https://www.bitlayer.org/"
   },
   {
     "Name": "bitSmiley",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
+    "Category": "DeFi",
+    "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "2023",
     "Image": "bitsmiley.png",
-    "Type": "Rollup",
-    "Funding": "10,000,000"
-  },
-  {
-    "Name": "BL2",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
-    "Native Token": "BL2T",
-    "Founded": "2023",
-    "Image": "bl2.png",
-    "Type": "Rollup"
-  },
-  {
-    "Name": "Bnzk",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
-    "Native Token": "BNZK",
-    "Founded": "2023",
-    "Image": "bnzk.png",
-    "Type": "Rollup"
+    "Type": "Sidechain",
+    "Description": "bitSmiley is a Bitcoin DeFi protocol offering bitUSD stablecoin, bitLending platform, and derivatives. It enables over-collateralized stablecoin minting using Bitcoin as collateral with peer-to-peer lending capabilities.",
+    "Link": "https://www.bitsmiley.io/"
   },
   {
     "Name": "BOB",
-    "Category": "Rollup",
-    "Network Stage": "Testnet",
+    "Category": "Zk-rollup",
+    "Network Stage": "Mainnet",
     "Native Token": "",
     "Founded": "2023",
     "Image": "bob.png",
     "Type": "Rollup",
-    "Funding": "21,000,000"
+    "Description": "BOB is a hybrid chain gateway to Bitcoin DeFi, combining Bitcoin security with EVM compatibility. It offers 1-click Bitcoin DeFi access, hybrid vaults for cross-chain yield, and trustless BTC deposits powered by BitVM and ZK-proofs.",
+    "Link": "https://www.gobob.xyz/"
   },
   {
     "Name": "Bool Network",
     "Category": "DA",
-    "Network Stage": "Testnet",
+    "Network Stage": "Mainnet",
     "Native Token": "",
-    "Founded": "2022",
+    "Founded": "2018",
     "Image": "bool-network.png",
-    "Type": "Other"
+    "Type": "Other",
+    "Description": "Bool Network is a decentralized Bitcoin verification layer using Dynamic Hidden Committees and Taproot technology. It enables cross-chain asset transfers and Bitcoin DeFi integration while maintaining self-custody.",
+    "Link": "https://www.bool.network"
   },
   {
     "Name": "Botanix",
@@ -199,7 +165,8 @@
     "Native Token": "BTC",
     "Founded": "2022",
     "Image": "botanix.png",
-    "Type": "Sidechain"
+    "Type": "Sidechain",
+    "Description": "Botanix Labs is developing Spiderchain, a fully decentralized EVM-equivalent Layer 2 solution for Bitcoin with enhanced scalability and smart contract capabilities."
   },
   {
     "Name": "BounceBit",
@@ -221,19 +188,18 @@
   },
   {
     "Name": "Citrea",
-    "Category": "Sovereign Rollup",
-    "Network Stage": "Pre-Testnet",
+    "Category": "Zk-rollup",
+    "Network Stage": "Testnet",
     "Native Token": "cBTC",
     "Founded": "2023",
     "Image": "citrea.png",
     "Type": "Rollup",
-    "Funding": "16,000,000",
     "Link": "https://citrea.xyz/"
   },
   {
     "Name": "Conflux",
     "Category": "Sidechain",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "",
     "Image": "conflux.png",
@@ -258,17 +224,8 @@
     "Type": "Sidechain"
   },
   {
-    "Name": "EAST Blue",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
-    "Native Token": "",
-    "Founded": "2023",
-    "Image": "east-blue.png",
-    "Type": "Rollup"
-  },
-  {
     "Name": "Elastos",
-    "Category": "Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Mainnet",
     "Native Token": "ELA",
     "Founded": "2017",
@@ -278,7 +235,7 @@
   {
     "Name": "Fedimint",
     "Category": "Chaumian Ecash",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "fm-BTC",
     "Founded": "2022",
     "Image": "fedimint.png",
@@ -294,8 +251,8 @@
     "Type": "Other"
   },
   {
-    "Name": "Hacash.com",
-    "Category": "Rollup",
+    "Name": "Hacash",
+    "Category": "Zk-rollup",
     "Network Stage": "Testnet",
     "Native Token": "HAC",
     "Founded": "2022",
@@ -331,8 +288,8 @@
   },
   {
     "Name": "Lightec",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
+    "Category": "Zk-rollup",
+    "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "2023",
     "Image": "lightec.png",
@@ -345,20 +302,12 @@
     "Native Token": "BTC",
     "Founded": "2015",
     "Image": "lightning-network.png",
-    "Type": "Bitcoin Native"
-  },
-  {
-    "Name": "Ligo",
-    "Category": "Rollup",
-    "Network Stage": "",
-    "Native Token": "",
-    "Founded": "2022",
-    "Image": "ligo.png",
-    "Type": "Rollup"
+    "Type": "Bitcoin Native",
+    "Description": "The Lightning Network is a second-layer payment protocol that enables instant, low-cost Bitcoin transactions through off-chain payment channels."
   },
   {
     "Name": "Liquid Network",
-    "Category": "Sidechain",
+    "Category": "Federation",
     "Network Stage": "Mainnet",
     "Native Token": "L-BTC",
     "Founded": "2018",
@@ -367,12 +316,14 @@
   },
   {
     "Name": "LumiBit",
-    "Category": "Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Testnet",
     "Native Token": "LBIT",
     "Founded": "2023",
     "Image": "lumibit.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Description": "LumiBit is a Bitcoin Layer 2 ZK-rollup with ZK-EVM technology, offering full EVM compatibility for Ethereum smart contract migration. It uses Bitcoin as a data availability layer with universal circuit design and efficient transaction verification.",
+    "Link": "https://lumibit.xyz/"
   },
   {
     "Name": "Map Protocol",
@@ -390,17 +341,18 @@
     "Native Token": "BTC",
     "Founded": "2021",
     "Image": "mercury-layer.png",
-    "Type": "Bitcoin Native"
+    "Type": "Bitcoin Native",
+    "Description": "Mercury Layer is a Bitcoin statechain implementation that enables off-chain Bitcoin transfers while maintaining security through on-chain enforcement."
   },
   {
     "Name": "Merlin Chain",
     "Category": "Zk-rollup",
     "Network Stage": "Mainnet",
     "Native Token": "MERL",
-    "Founded": "2023",
-    "Funding": "1,500,000",
+    "Founded": "2024",
     "Image": "merlin-chain.png",
     "Type": "Rollup",
+    "Description": "Merlin Chain is Bitcoin's largest Layer 2 with $4B+ TVL, launched January 2024. It's a ZK-rollup with EVM compatibility, hosting 200+ projects and 1.9M+ users, processing 12.7M+ transactions and supporting 80%+ of Bitcoin-native assets.",
     "Link": "https://merlinchain.io/"
   },
   {
@@ -411,15 +363,6 @@
     "Founded": "",
     "Image": "mintlayer.png",
     "Type": "Sidechain"
-  },
-  {
-    "Name": "Mirror L2",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
-    "Native Token": "mBTC",
-    "Founded": "2023",
-    "Image": "mirror-l2.png",
-    "Type": "Rollup"
   },
   {
     "Name": "MVC",
@@ -451,7 +394,7 @@
   {
     "Name": "Nubit",
     "Category": "DA",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "",
     "Image": "nubit.png",
@@ -467,15 +410,15 @@
     "Type": "Other"
   },
   {
-    "Name": "QED Protocol",
+    "Name": "Psy Protocol",
     "Category": "Zk-rollup",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "",
-    "Founded": "2023",
-    "Funding": "9,000,000",
-    "Image": "qed-protocol.png",
+    "Founded": "2024",
+    "Image": "psy.png",
     "Type": "Rollup",
-    "Link": "https://qedprotocol.com/"
+    "Description": "Psy Protocol is a privacy-preserving blockchain with PARTH architecture and Proof of Useful Work 2.0. It achieves millions of TPS with local proving for radical privacy, using Software-Defined Keys for programmable identity and AI agent support.",
+    "Link": "https://psy.xyz/"
   },
   {
     "Name": "RGB",
@@ -484,7 +427,8 @@
     "Native Token": "BTC",
     "Founded": "2016",
     "Image": "rgb.png",
-    "Type": "Bitcoin Native"
+    "Type": "Bitcoin Native",
+    "Description": "RGB is a client-side validated protocol for Bitcoin that enables smart contracts and token issuance while keeping all data off-chain for privacy."
   },
   {
     "Name": "RGB++",
@@ -496,31 +440,26 @@
     "Type": "Other"
   },
   {
-    "Name": "Rollkit",
-    "Category": "Sovereign Rollup",
-    "Network Stage": "Testnet",
-    "Native Token": "",
-    "Founded": "2022",
-    "Image": "rollkit.png",
-    "Type": "Rollup"
-  },
-  {
     "Name": "Rollux",
-    "Category": "Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Mainnet",
     "Native Token": "SYS",
     "Founded": "2023",
     "Image": "rollux.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Description": "Rollux is Syscoin's official Layer 2 OPStack rollup that inherits Bitcoin's PoW security through merge-mining. It uses Proof-of-Data Availability (PoDA) for 2-second block times, sub-$0.01 fees, and full EVM compatibility with Sentry Node finality.",
+    "Link": "https://syscoin.org/"
   },
   {
     "Name": "Rooch Network",
-    "Category": "Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Testnet",
-    "Native Token": "",
-    "Founded": "2022",
+    "Native Token": "ROOCH",
+    "Founded": "2023",
     "Image": "rooch-network.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Description": "Rooch Network is a MoveVM-based Bitcoin Layer 2 enabling Bitcoin to become programmable, scalable, and interoperable. It features non-custodial BTC staking compatible with Babylon protocol and supports 130M+ transactions with 7,500+ users.",
+    "Link": "https://rooch.network/"
   },
   {
     "Name": "Rootstock",
@@ -543,7 +482,7 @@
   {
     "Name": "Satoshi Protocol",
     "Category": "",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "BTC",
     "Founded": "",
     "Image": "satoshi-protocol.png",
@@ -551,8 +490,8 @@
   },
   {
     "Name": "SatoshiSync",
-    "Category": "Rollup",
-    "Network Stage": "Pre-Testnet",
+    "Category": "Zk-rollup",
+    "Network Stage": "Testnet",
     "Native Token": "SSNC",
     "Founded": "2023",
     "Image": "satoshisync.png",
@@ -560,7 +499,7 @@
   },
   {
     "Name": "SatoshiVM",
-    "Category": "Rollup",
+    "Category": "Zk-rollup",
     "Network Stage": "Testnet",
     "Native Token": "SAVM",
     "Founded": "2023",
@@ -573,7 +512,6 @@
     "Network Stage": "Testnet",
     "Native Token": "sBTC",
     "Founded": "2021",
-    "Funding": "30,000,000",
     "Image": "side-protocol.png",
     "Type": "Sidechain",
     "Link": "https://side.one/"
@@ -586,7 +524,6 @@
     "Founded": "2020",
     "Image": "sovryn.png",
     "Type": "Rollup",
-    "Funding": "",
     "Link": "https://sovryn.com/"
   },
   {
@@ -597,7 +534,7 @@
     "Founded": "2022",
     "Image": "spark.png",
     "Type": "Bitcoin Native",
-    "Funding": "170,000,000",
+    "Description": "Spark is a Bitcoin statechain protocol that enables instant, private Bitcoin transfers with minimal on-chain footprint through cryptographic proofs.",
     "Link": "https://spark.money"
   },
   {
@@ -629,19 +566,18 @@
   },
   {
     "Name": "TunaChain",
-    "Category": "Optimistic Rollup",
-    "Network Stage": "Pre-Testnet",
+    "Category": "Zk-rollup",
+    "Network Stage": "Testnet",
     "Native Token": "TUNA",
     "Founded": "2023",
     "Image": "tunachain.png",
     "Type": "Rollup",
-    "Funding": "8,900,000",
     "Link": "https://tunachain.io/"
   },
   {
     "Name": "ZeroSync",
-    "Category": "Validity Rollup",
-    "Network Stage": "Pre-Testnet",
+    "Category": "Zk-rollup",
+    "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "2022",
     "Image": "zerosync.png",
@@ -650,7 +586,7 @@
   {
     "Name": "zkBase",
     "Category": "zkEVM",
-    "Network Stage": "Pre-Testnet",
+    "Network Stage": "Testnet",
     "Native Token": "",
     "Founded": "2020",
     "Image": "zkbase.png",
@@ -662,7 +598,6 @@
     "Network Stage": "Testnet",
     "Native Token": "ZULU",
     "Founded": "2023",
-    "Funding": "3,000,000",
     "Image": "zulu-network.png",
     "Type": "Rollup",
     "Link": "https://zulunetwork.io/"
@@ -674,7 +609,8 @@
     "Native Token": "BTC",
     "Founded": "2024",
     "Image": "lnfi.png",
-    "Type": "Bitcoin Native"
+    "Type": "Bitcoin Native",
+    "Description": "Lnfi Network is a Bitcoin Lightning Network implementation focused on providing fast, low-cost Bitcoin payments with enhanced privacy features."
   },
   {
     "Name": "Lygos Finance",
@@ -683,7 +619,8 @@
     "Native Token": "BTC",
     "Founded": "2025",
     "Image": "lygos-finance.png",
-    "Type": "Bitcoin Native"
+    "Type": "Bitcoin Native",
+    "Description": "Lygos Finance leverages Discreet Log Contracts (DLCs) to enable Bitcoin-based financial derivatives and smart contract functionality on Bitcoin."
   },
   {
     "Name": "BTKN (Spark)",
@@ -734,5 +671,36 @@
     "Image": "brc-20.png",
     "Type": "Meta Protocols",
     "Link": "https://brc20.com/"
+  },
+  {
+    "Name": "Bitway",
+    "Category": "Federation",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTCT",
+    "Founded": "2025",
+    "Image": "bitway.png",
+    "Type": "Sidechain",
+    "Link": "https://bitway.com/"
+  },
+  {
+    "Name": "Mezo",
+    "Category": "Appchain",
+    "Network Stage": "Mainnet",
+    "Native Token": "MUSD",
+    "Founded": "2024",
+    "Image": "mezo.png",
+    "Type": "Other",
+    "Description": "Mezo is an economic layer for Bitcoin that enables yield generation through Proof of HODL, bridging Bitcoin holders to decentralized applications.",
+    "Link": "https://mezo.org/"
+  },
+  {
+    "Name": "ZKM",
+    "Category": "Zk-rollup",
+    "Network Stage": "Testnet",
+    "Native Token": "",
+    "Founded": "2024",
+    "Image": "zkm.png",
+    "Type": "Rollup",
+    "Description": "ZKM is developing a Bitcoin Layer 2 solution focusing on scalability and interoperability, incubated by Ethereum Layer 2 Metis."
   }
 ]

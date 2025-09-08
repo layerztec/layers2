@@ -1,10 +1,12 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import L2DataTable from '@/components/L2DataTable.vue';
+import ProtocolModal from '@/components/ProtocolModal.vue';
 import Logo from '@/components/Logo.vue';
 import Footer from '@/components/Footer.vue';
 import Sidebar from '@/components/Sidebar.vue';
 import MobileFilters from '@/components/MobileFilters.vue';
+import SearchBox from '@/components/SearchBox.vue';
 
 // Filter states
 const searchTerm = ref('');
@@ -15,6 +17,10 @@ const selectedNetworkStage = ref('');
 // Data
 const tableData = ref([]);
 const loading = ref(true);
+
+// Modal state
+const isModalOpen = ref(false);
+const selectedProtocol = ref(null);
 
 // Computed properties for filters
 const types = computed(() => {
@@ -101,6 +107,17 @@ const loadData = async () => {
   }
 };
 
+// Modal handlers
+const handleOpenModal = (protocol) => {
+  selectedProtocol.value = protocol;
+  isModalOpen.value = true;
+};
+
+const handleCloseModal = () => {
+  isModalOpen.value = false;
+  selectedProtocol.value = null;
+};
+
 onMounted(() => {
   loadData();
 });
@@ -146,15 +163,8 @@ onMounted(() => {
 
       <!-- Main Content -->
       <main class="flex-1 lg:ml-[230px]">
-        <!-- Fixed Search Bar -->
-        <div class="sticky top-[70px] z-40 flex h-[70px] items-center border-b border-[#e0e0e0] bg-white px-4 lg:px-6">
-          <input
-            v-model="searchTerm"
-            type="text"
-            placeholder="Search projects..."
-            class="w-full text-[16px] text-[#a4a4a4] placeholder:text-[#a4a4a4] focus:outline-none"
-          >
-        </div>
+        <!-- Search Box Component -->
+        <SearchBox v-model="searchTerm" />
 
         <!-- Mobile Filter Select Boxes -->
         <MobileFilters
@@ -186,6 +196,7 @@ onMounted(() => {
             :filtered-data="filteredData"
             :grouped-data="groupedData"
             :loading="loading"
+            @open-modal="handleOpenModal"
           />
         </div>
 
@@ -193,5 +204,12 @@ onMounted(() => {
         <Footer />
       </main>
     </div>
+
+    <!-- Protocol Modal -->
+    <ProtocolModal
+      :is-open="isModalOpen"
+      :protocol="selectedProtocol"
+      @close="handleCloseModal"
+    />
   </div>
 </template>
