@@ -7,6 +7,9 @@ import Footer from '@/components/Footer.vue';
 import Sidebar from '@/components/Sidebar.vue';
 import MobileFilters from '@/components/MobileFilters.vue';
 import SearchBox from '@/components/SearchBox.vue';
+import ProjectsCount from '@/components/ProjectsCount.vue';
+import StatsBlock2 from '@/components/StatsBlock2.vue';
+import StatsBlock3 from '@/components/StatsBlock3.vue';
 
 // Filter states
 const searchTerm = ref('');
@@ -165,6 +168,15 @@ onMounted(() => {
       <main class="flex-1 lg:ml-[230px]">
         <!-- Search Box Component -->
         <SearchBox v-model="searchTerm" />
+
+        <!-- Stats Blocks -->
+        <div class="p-4 lg:p-6">
+          <div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <ProjectsCount />
+            <StatsBlock2 />
+            <StatsBlock3 />
+          </div>
+        </div>
 
         <!-- Mobile Filter Select Boxes -->
         <MobileFilters
