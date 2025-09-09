@@ -525,5 +525,93 @@
         "Round": "Strategic"
       }
     ]
+  },
+  {
+    "ProjectName": "Lightning Labs",
+    "FundingRounds": [
+      {
+        "Amount": "2,500,000",
+        "Year": "2018",
+        "Investors": [
+          "Jack Dorsey",
+          "Kevin Hartz",
+          "Jacqueline Reses",
+          "Charlie Lee",
+          "Vlad Tenev",
+          "Ben Davenport",
+          "David Sacks",
+          "Digital Currency Group",
+          "The Hive",
+          "Tikhon Bernstam",
+          "Bill Lee",
+          "Hard Yaka"
+        ],
+        "Round": "Seed"
+      },
+      {
+        "Amount": "10,000,000",
+        "Year": "2020",
+        "Investors": [
+          "Craft Ventures",
+          "Slow Ventures",
+          "Race Capital",
+          "Ribbit Capital",
+          "M13",
+          "RRE Ventures",
+          "Abstract Ventures",
+          "Avichal Garg",
+          "Stillmark",
+          "Howard Morgan",
+          "Ross Stevens",
+          "CMT Digital",
+          "Goldcrest Capital",
+          "John Pfeffer",
+          "Studio Management"
+        ],
+        "Round": "Series A"
+      },
+      {
+        "Amount": "70,000,000",
+        "Year": "2022",
+        "Investors": [
+          "Valor Equity Partners",
+          "Baillie Gifford",
+          "Vlad Tenev",
+          "Goldcrest Capital",
+          "NYDIG",
+          "Moore Strategic Ventures",
+          "Alan Lane",
+          "Kingsway Capital",
+          "Brevan Howard Asset Management",
+          "Stillmark",
+          "M13",
+          "Craft Ventures"
+        ],
+        "Round": "Series B"
+      }
+    ]
+  },
+  {
+    "ProjectName": "ACINQ",
+    "FundingRounds": [
+      {
+        "Amount": "1,700,000",
+        "Year": "2018",
+        "Investors": [
+          "Serena"
+        ],
+        "Round": "Seed"
+      },
+      {
+        "Amount": "8,000,000",
+        "Year": "2019",
+        "Investors": [
+          "Idinvest Partners",
+          "Bpifrance",
+          "Serena"
+        ],
+        "Round": "Series A"
+      }
+    ]
   }
 ]

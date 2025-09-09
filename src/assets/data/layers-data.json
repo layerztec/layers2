@@ -13,7 +13,7 @@
     "Name": "Alpen Labs",
     "Category": "Zk-rollup",
     "Network Stage": "Testnet",
-    "Description": "Alpen Labs is a Bitcoin Layer‑2 ZK-rollup (Strata) enabling scalable payments, lending, stablecoins, and smart contracts with privacy and programmability.",
+    "Description": "Alpen Labs is developing Strata, a Bitcoin Layer 2 ZK-rollup that enables scalable payments, lending, stablecoins, and smart contracts with enhanced privacy and programmability. Built with zero-knowledge technology, Strata aims to bring full DeFi functionality to Bitcoin while maintaining privacy and security. The protocol supports complex financial operations like lending, borrowing, and yield farming directly on Bitcoin, expanding its utility beyond simple value transfer.",
     "Native Token": "",
     "Founded": "2022",
     "Image": "alpen-labs.png",
@@ -36,7 +36,7 @@
     "Founded": "2024",
     "Image": "ark.png",
     "Type": "Bitcoin Native",
-    "Description": "Ark enables instant, private Bitcoin payments through virtual UTXOs without requiring on-chain transactions or Lightning channels.",
+    "Description": "Ark is a groundbreaking Bitcoin Layer 2 solution that enables instant, private Bitcoin payments through virtual UTXOs without requiring on-chain transactions or Lightning channels. By creating a virtual UTXO system, Ark allows users to send Bitcoin instantly and privately while maintaining full Bitcoin security. The protocol eliminates the need for channel management, routing complexity, and on-chain fees, making Bitcoin payments as simple as traditional digital payments while preserving Bitcoin's core properties.",
     "Link": "https://arklabs.xyz/"
   },
   {
@@ -190,6 +190,7 @@
     "Founded": "2023",
     "Image": "citrea.png",
     "Type": "Rollup",
+    "Description": "Citrea is a Bitcoin Layer 2 ZK-rollup that brings Ethereum-compatible smart contracts to Bitcoin while maintaining Bitcoin's security guarantees. Built on the CitreaVM, it enables developers to deploy Solidity contracts and build DeFi applications on Bitcoin using cBTC as the native token. Citrea uses zero-knowledge proofs to ensure transaction validity while leveraging Bitcoin as the data availability layer, providing both scalability and security for Bitcoin-based smart contract applications.",
     "Link": "https://citrea.xyz/"
   },
   {
@@ -299,7 +300,8 @@
     "Founded": "2015",
     "Image": "lightning-network.png",
     "Type": "Bitcoin Native",
-    "Description": "The Lightning Network is a second-layer payment protocol that enables instant, low-cost Bitcoin transactions through off-chain payment channels."
+    "Description": "The Lightning Network is Bitcoin's premier Layer 2 scaling solution, enabling instant, low-cost micropayments through off-chain payment channels. As the first and most established Bitcoin L2, it processes millions of transactions daily with sub-second settlement times and minimal fees. The network uses bidirectional payment channels and multi-hop routing to enable scalable Bitcoin payments while maintaining the security and decentralization of the base layer.",
+    "Link": "https://lightning.network/"
   },
   {
     "Name": "Liquid Network",
@@ -308,7 +310,9 @@
     "Native Token": "L-BTC",
     "Founded": "2018",
     "Image": "liquid-network.png",
-    "Type": "Sidechain"
+    "Type": "Sidechain",
+    "Description": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution interoperable with Lightning that enables faster, more confidential bitcoin transactions and the issuance and exchange of digital assets like stablecoins, tokenized securities, and bonds.",
+    "Link": "https://liquid.net/"
   },
   {
     "Name": "LumiBit",
@@ -545,7 +549,7 @@
     "Founded": "2022",
     "Image": "spark.png",
     "Type": "Bitcoin Native",
-    "Description": "Spark is a Bitcoin statechain protocol that enables instant, private Bitcoin transfers with minimal on-chain footprint through cryptographic proofs.",
+    "Description": "Spark is a Bitcoin statechain protocol that revolutionizes Bitcoin transfers by enabling instant, private transactions with minimal on-chain footprint. Unlike traditional Bitcoin transactions, Spark uses cryptographic proofs and statechains to allow users to transfer Bitcoin ownership off-chain while maintaining security through on-chain enforcement. This approach provides near-instant settlement, enhanced privacy, and significantly reduced transaction costs compared to on-chain Bitcoin transfers.",
     "Link": "https://spark.money"
   },
   {
@@ -641,6 +645,7 @@
     "Founded": "2024",
     "Image": "btkn-spark.png",
     "Type": "Meta Protocols",
+    "Description": "BTKN is a Bitcoin-native token standard built on the Spark protocol's LRC20 framework, enabling the creation and management of fungible tokens directly on Bitcoin. Unlike traditional token standards that require smart contracts, BTKN leverages Bitcoin's UTXO model and witness data to create tokens that are native to Bitcoin's architecture. This approach provides a more secure and Bitcoin-aligned way to issue and transfer tokens while maintaining compatibility with Bitcoin's core principles and security model.",
     "Link": "https://docs.spark.money/lrc20/hello-btkn"
   },
   {

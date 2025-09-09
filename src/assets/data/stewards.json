@@ -1,0 +1,56 @@
+[
+  {
+    "Steward": "Lightning Labs",
+    "Founded": "2016",
+    "Website": "https://lightning.engineering/",
+    "Description": "Lightning Labs develops software that powers the Lightning Network. Their open source, secure, and scalable Lightning systems enable users to send and receive money more efficiently than ever before. They also offer a series of verifiable, non-custodial Lightning-based financial services, bridging the world of open source software and the next-generation of bitcoin financial software.",
+    "Products": [
+      "Lightning Terminal",
+      "Lightning Network Daemon (LND)",
+      "Lightning Pool",
+      "Lightning Loop"
+    ],
+    "Focus": "Lightning Network Infrastructure",
+    "Type": "Company",
+    "Image": "lightning-labs.png",
+    "Projects": [
+      "Lightning Network"
+    ]
+  },
+  {
+    "Steward": "ACINQ",
+    "Founded": "2014",
+    "Website": "https://acinq.co/",
+    "Description": "ACINQ is a French startup specializing in Bitcoin scalability solutions. They develop Eclair, a robust implementation of the Lightning Network, and Phoenix Wallet, a user-friendly, self-custodial Bitcoin wallet with native Lightning support. ACINQ focuses on making Lightning Network technology accessible and easy to use for both developers and end users.",
+    "Products": [
+      "Eclair",
+      "Phoenix Wallet",
+      "Strike API"
+    ],
+    "Focus": "Lightning Network Implementation & Wallet Solutions",
+    "Type": "Company",
+    "Image": "acinq.png",
+    "Projects": [
+      "Lightning Network"
+    ]
+  },
+  {
+    "Steward": "Blockstream",
+    "Founded": "2014",
+    "Website": "https://blockstream.com/",
+    "Description": "Blockstream is a blockchain technology company founded by Adam Back and other leading cryptographers. They develop Core Lightning (CLN), a key implementation of the Lightning Network, and operate the Liquid Network sidechain. Blockstream focuses on building Bitcoin infrastructure and advancing Layer 2 solutions for faster, more scalable Bitcoin transactions.",
+    "Products": [
+      "Core Lightning (CLN)",
+      "Liquid Network",
+      "Blockstream Satellite",
+      "Elements Platform"
+    ],
+    "Focus": "Bitcoin Infrastructure & Lightning Network Development",
+    "Type": "Company",
+    "Image": "blockstream.png",
+    "Projects": [
+      "Lightning Network",
+      "Liquid Network"
+    ]
+  }
+]
