@@ -61,12 +61,25 @@
   },
   {
     "Name": "BEVM",
-    "Category": "Sidechain",
+    "Category": "Zk-rollup",
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
-    "Founded": "",
+    "Founded": "2024",
     "Image": "bevm.png",
-    "Type": "Sidechain"
+    "Type": "Sidechain",
+    "Description": "BEVM is the first fully decentralized Bitcoin Layer 2 that is EVM-compatible and uses BTC as gas. It enables Ethereum ecosystem DApps to operate on Bitcoin L2, offering cross-chain interaction, data integrity assurance, decentralized processing, and advanced scalability.",
+    "Link": "https://bevm.io"
+  },
+  {
+    "Name": "Bitfinity",
+    "Category": "Zk-rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTF",
+    "Founded": "2021",
+    "Image": "bitfinity-network.png",
+    "Type": "Sidechain",
+    "Description": "Bitfinity Network is a Bitcoin Layer 2 solution that integrates Ethereum Virtual Machine (EVM) compatibility into the Bitcoin ecosystem. It enables developers to deploy Solidity-based smart contracts and decentralized applications on Bitcoin, significantly expanding its functionality beyond traditional transactions.",
+    "Link": "https://bitfinity.network"
   },
   {
     "Name": "Biop",
@@ -105,15 +118,7 @@
     "Image": "bitcredit-protocol.png",
     "Type": "Other"
   },
-  {
-    "Name": "Bitfinity Network",
-    "Category": "Sidechain",
-    "Network Stage": "Testnet",
-    "Native Token": "BFT",
-    "Founded": "",
-    "Image": "bitfinity-network.png",
-    "Type": "Sidechain"
-  },
+ 
   {
     "Name": "BitLayer",
     "Category": "Zk-rollup",
@@ -330,9 +335,11 @@
     "Category": "Sidechain",
     "Network Stage": "Mainnet",
     "Native Token": "MAPO",
-    "Founded": "",
+    "Founded": "2019",
     "Image": "map-protocol.png",
-    "Type": "Sidechain"
+    "Type": "Sidechain",
+    "Description": "MAP Protocol is a Bitcoin Layer 2 interoperability solution utilizing ZK light client technology as a gateway for developers and users within the Bitcoin ecosystem. It enables seamless cross-chain interactions between Bitcoin and other public blockchain networks.",
+    "Link": "https://www.mapprotocol.io/"
   },
   {
     "Name": "Mercury Layer",
@@ -440,6 +447,17 @@
     "Type": "Other"
   },
   {
+    "Name": "Riema Labs",
+    "Category": "DA",
+    "Network Stage": "Testnet",
+    "Native Token": "",
+    "Founded": "2024",
+    "Image": "riema-labs.png",
+    "Type": "Other",
+    "Description": "Riema Labs is a pioneering entity in the Bitcoin ecosystem, renowned for its innovative data availability layer designed to significantly reduce transaction costs. The startup's innovative product is Nubit, the first-ever Bitcoin-native data availability layer, which leverages advanced techniques such as native staking and decentralized bridging.",
+    "Link": "https://nubit.org"
+  },
+  {
     "Name": "Rollux",
     "Category": "Zk-rollup",
     "Network Stage": "Mainnet",
@@ -481,12 +499,14 @@
   },
   {
     "Name": "Satoshi Protocol",
-    "Category": "",
+    "Category": "DeFi",
     "Network Stage": "Testnet",
     "Native Token": "BTC",
-    "Founded": "",
+    "Founded": "2024",
     "Image": "satoshi-protocol.png",
-    "Type": "Other"
+    "Type": "Other",
+    "Description": "Satoshi Protocol is the first stablecoin backed by Bitcoin, designed to foster a new era of decentralized finance by enhancing transparency and efficiency in blockchain transactions. It emphasizes secure, trustless exchanges and aims to streamline financial operations across various blockchain networks.",
+    "Link": "https://satoshiprotocol.org"
   },
   {
     "Name": "SatoshiSync",
@@ -623,7 +643,7 @@
     "Description": "Lygos Finance leverages Discreet Log Contracts (DLCs) to enable Bitcoin-based financial derivatives and smart contract functionality on Bitcoin."
   },
   {
-    "Name": "BTKN (Spark)",
+    "Name": "BTKN",
     "Category": "Keys",
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
@@ -702,5 +722,49 @@
     "Image": "zkm.png",
     "Type": "Rollup",
     "Description": "ZKM is developing a Bitcoin Layer 2 solution focusing on scalability and interoperability, incubated by Ethereum Layer 2 Metis."
+  },
+  {
+    "Name": "Midl",
+    "Category": "Sidechain",
+    "Network Stage": "Testnet",
+    "Native Token": "",
+    "Founded": "2025",
+    "Image": "midl.png",
+    "Type": "Sidechain",
+    "Description": "Midl is an execution environment that brings smart contracts to Bitcoin, enabling native dApps and financial products. Unlike sidechains or Layer 2s, it provides a native execution environment for Bitcoin with seamless support for Bitcoin-native token standards.",
+    "Link": "https://midl.xyz/"
+  },
+  {
+    "Name": "Plasma",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "XPL",
+    "Founded": "2025",
+    "Image": "plasma.png",
+    "Type": "Sidechain",
+    "Description": "Plasma is a Bitcoin sidechain with full EVM compatibility, engineered for speed and efficiency. It serves as a high-performance settlement layer optimized for fee-free USDT transfers, cross-border payments, remittances, and DeFi services globally.",
+    "Link": "https://plasma.to"
+  },
+  {
+    "Name": "Babylon",
+    "Category": "Staking Protocol",
+    "Network Stage": "Mainnet",
+    "Native Token": "BABY",
+    "Founded": "2022",
+    "Image": "babylon.png",
+    "Type": "Other",
+    "Description": "Babylon is a Bitcoin staking protocol that enables non-custodial staking via Taproot time-locked scripts. Users can stake BTC to secure other blockchains while maintaining self-custody and earning rewards, all without wrapping or bridging Bitcoin.",
+    "Link": "https://babylonlabs.io/"
+  },
+  {
+    "Name": "Sova",
+    "Category": "Bitcoin L2",
+    "Network Stage": "Testnet",
+    "Native Token": "SOVA",
+    "Founded": "2024",
+    "Image": "sova.png",
+    "Type": "Other",
+    "Description": "Sova is the first native-Bitcoin treasury chain built on OP Superchain, enabling UTXO-aware, EVM-compatible smart contracts to interact with real BTC without wrapping or federated bridges. Designed for institutional BTC yield generation.",
+    "Link": "https://www.sova.io/"
   }
 ]

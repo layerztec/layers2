@@ -36,6 +36,39 @@
       }
     ]
   },
+
+  {
+    "ProjectName": "Bitfinity",
+    "FundingRounds": [
+      {
+        "Amount": "1,000,000",
+        "Year": "2021",
+        "Investors": [
+          "Unknown"
+        ],
+        "Round": "Seed"
+      },
+      {
+        "Amount": "6,000,000",
+        "Year": "2023",
+        "Investors": [
+          "Unknown"
+        ],
+        "Round": "Growth"
+      },
+      {
+        "Amount": "12,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Polychain Capital",
+          "ParaFi",
+          "Draft Ventures",
+          "Warburg Serres"
+        ],
+        "Round": "Mainnet Launch"
+      }
+    ]
+  },
   {
     "ProjectName": "bitSmiley",
     "FundingRounds": [
@@ -85,6 +118,28 @@
           "Blockchain.com Ventures"
         ],
         "Round": "Seed"
+      },
+      {
+        "Amount": "9,460,000",
+        "Year": "2025",
+        "Investors": [
+          "Anchorage",
+          "Amber Group",
+          "Sats Ventures",
+          "Castle Island Ventures",
+          "Ledger",
+          "RockawayX",
+          "Asymmetric",
+          "IOSG Ventures",
+          "UTXO Management",
+          "Daedalus",
+          "CMS",
+          "Bankless Ventures",
+          "Hypersphere",
+          "Alliance",
+          "Sigil/Zeeprime"
+        ],
+        "Round": "Strategic"
       }
     ]
   },
@@ -113,12 +168,21 @@
     "ProjectName": "Botanix",
     "FundingRounds": [
       {
-        "Amount": "11,500,000",
+        "Amount": "3,000,000",
+        "Year": "2023",
+        "Investors": [
+          "Unknown"
+        ],
+        "Round": "Pre-seed"
+      },
+      {
+        "Amount": "8,500,000",
         "Year": "2024",
         "Investors": [
           "Polychain Capital",
           "Placeholder Capital",
-          "Other VCs"
+          "Valor Equity Partners",
+          "ABCDE"
         ],
         "Round": "Seed"
       }
@@ -204,6 +268,14 @@
           "Ledger Cathay Fund"
         ],
         "Round": "Multiple Rounds"
+      },
+      {
+        "Amount": "7,500,000",
+        "Year": "2025",
+        "Investors": [
+          "Ledger Cathay Fund"
+        ],
+        "Round": "Strategic"
       }
     ]
   },
@@ -234,6 +306,46 @@
         "Year": "2024",
         "Investors": [
           "Blockchain Capital"
+        ],
+        "Round": "Seed"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Riema Labs",
+    "FundingRounds": [
+      {
+        "Amount": "8,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Polychain Capital",
+          "Nomad Capital",
+          "dao5",
+          "The Spartan Group",
+          "Primitive",
+          "OKX Ventures",
+          "L2 Iterative Ventures",
+          "GeekCartel",
+          "Symbolic Capital",
+          "Big Brain Holdings",
+          "Global Coin Research",
+          "Protagonist",
+          "Gate Ventures",
+          "Animoca Ventures",
+          "Mask Network"
+        ],
+        "Round": "Seed"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Satoshi Protocol",
+    "FundingRounds": [
+      {
+        "Amount": "2,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Yenwen Feng"
         ],
         "Round": "Seed"
       }
@@ -321,6 +433,96 @@
           "Unknown"
         ],
         "Round": "Unknown"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Liquid Network",
+    "FundingRounds": [
+      {
+        "Amount": "210,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Fulgur Ventures"
+        ],
+        "Round": "Convertible Note"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Midl",
+    "FundingRounds": [
+      {
+        "Amount": "2,400,000",
+        "Year": "2025",
+        "Investors": [
+          "Draper Associates",
+          "Draper Dragon"
+        ],
+        "Round": "Seed"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Plasma",
+    "FundingRounds": [
+      {
+        "Amount": "500,000,000",
+        "Year": "2025",
+        "Investors": [
+          "Public ICO Participants"
+        ],
+        "Round": "ICO"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Babylon",
+    "FundingRounds": [
+      {
+        "Amount": "18,000,000",
+        "Year": "2023",
+        "Investors": [
+          "Polychain Capital",
+          "Hack VC"
+        ],
+        "Round": "Series A"
+      },
+      {
+        "Amount": "70,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Paradigm",
+          "Polychain Capital",
+          "Bullish Capital"
+        ],
+        "Round": "Strategic"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Fedimint",
+    "FundingRounds": [
+      {
+        "Amount": "17,000,000",
+        "Year": "2023",
+        "Investors": [
+          "Ego Death Capital"
+        ],
+        "Round": "Series A"
+      }
+    ]
+  },
+  {
+    "ProjectName": "MAP Protocol",
+    "FundingRounds": [
+      {
+        "Amount": "1,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Gryps"
+        ],
+        "Round": "Strategic"
       }
     ]
   }

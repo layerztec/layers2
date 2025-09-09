@@ -7,6 +7,9 @@ import Footer from '@/components/Footer.vue';
 import Sidebar from '@/components/Sidebar.vue';
 import MobileFilters from '@/components/MobileFilters.vue';
 import SearchBox from '@/components/SearchBox.vue';
+import ProjectsCount from '@/components/ProjectsCount.vue';
+import GitHubActivity from '@/components/GitHubActivity.vue';
+import Layer2Investments from '@/components/Layer2Investments.vue';
 
 // Filter states
 const searchTerm = ref('');
@@ -166,6 +169,15 @@ onMounted(() => {
         <!-- Search Box Component -->
         <SearchBox v-model="searchTerm" />
 
+        <!-- Stats Blocks -->
+        <div class="p-4 lg:p-6">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <ProjectsCount @open-modal="handleOpenModal" />
+            <GitHubActivity />
+            <Layer2Investments />
+          </div>
+        </div>
+
         <!-- Mobile Filter Select Boxes -->
         <MobileFilters
           :types="types"
@@ -186,7 +198,7 @@ onMounted(() => {
               Projects
             </h1>
             <p class="text-[11px] text-[#a4a4a4]">
-              Showing {{ filteredData.length }} of {{ tableData.length }} protocols
+              Showing {{ filteredData.length }} protocols
             </p>
           </div>
 
