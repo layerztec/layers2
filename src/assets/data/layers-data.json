@@ -51,15 +51,6 @@
     "Link": "https://www.bsquared.network/"
   },
   {
-    "Name": "Babylon",
-    "Category": "Sidechain",
-    "Network Stage": "Testnet",
-    "Native Token": "",
-    "Founded": "",
-    "Image": "babylon.png",
-    "Type": "Sidechain"
-  },
-  {
     "Name": "BEVM",
     "Category": "Zk-rollup",
     "Network Stage": "Mainnet",
