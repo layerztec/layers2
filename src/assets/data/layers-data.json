@@ -430,7 +430,8 @@
     "Founded": "2016",
     "Image": "rgb.png",
     "Type": "Bitcoin Native",
-    "Description": "RGB is a client-side validated protocol for Bitcoin that enables smart contracts and token issuance while keeping all data off-chain for privacy."
+    "Description": "RGB is a protocol for issuing and transferring digital assets and rights on Bitcoin through customizable off-chain smart contracts. Using client-side validation, RGB keeps transaction data off-chain while relying on Bitcoin as a commitment layer to prevent double spending. This ensures greater scalability, enhanced privacy, and flexibility. RGB integrates seamlessly with Lightning Network, enabling asset-specific lightning channels and compatibility with future Bitcoin scalability solutions.",
+    "Link": "https://rgb.info/"
   },
   {
     "Name": "RGB++",
