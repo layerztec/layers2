@@ -481,7 +481,9 @@
     "Native Token": "RBTC",
     "Founded": "2015",
     "Image": "rootstock.png",
-    "Type": "Sidechain"
+    "Type": "Sidechain",
+    "Description": "Rootstock (RSK) is a Bitcoin sidechain that brings smart contract functionality to Bitcoin through EVM compatibility. It uses merged mining with Bitcoin for security and enables developers to deploy Ethereum-compatible smart contracts while leveraging Bitcoin's security model. RSK features a two-way peg system allowing seamless conversion between BTC and RBTC.",
+    "Link": "https://www.rsk.co/"
   },
   {
     "Name": "Rosetta Network",
