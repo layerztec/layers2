@@ -115,8 +115,10 @@ const fetchPullRequests = async () => {
 
     const data = await response.json();
 
-    // Filter for merged pull requests
-    const mergedPRs = data.filter((pr) => pr.merged_at !== null);
+    // Filter for merged pull requests and sort by merge date (latest first)
+    const mergedPRs = data
+      .filter((pr) => pr.merged_at !== null)
+      .sort((a, b) => new Date(b.merged_at) - new Date(a.merged_at));
 
     // Take only the latest 5 merged PRs
     const latestMergedPRs = mergedPRs.slice(0, 5).map((pr) => ({
