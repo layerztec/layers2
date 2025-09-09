@@ -475,5 +475,55 @@
         "Round": "ICO"
       }
     ]
+  },
+  {
+    "ProjectName": "Babylon",
+    "FundingRounds": [
+      {
+        "Amount": "18,000,000",
+        "Year": "2023",
+        "Investors": [
+          "Polychain Capital",
+          "Hack VC"
+        ],
+        "Round": "Series A"
+      },
+      {
+        "Amount": "70,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Paradigm",
+          "Polychain Capital",
+          "Bullish Capital"
+        ],
+        "Round": "Strategic"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Fedimint",
+    "FundingRounds": [
+      {
+        "Amount": "17,000,000",
+        "Year": "2023",
+        "Investors": [
+          "Ego Death Capital"
+        ],
+        "Round": "Series A"
+      }
+    ]
+  },
+  {
+    "ProjectName": "MAP Protocol",
+    "FundingRounds": [
+      {
+        "Amount": "1,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Gryps"
+        ],
+        "Round": "Strategic"
+      }
+    ]
   }
 ]

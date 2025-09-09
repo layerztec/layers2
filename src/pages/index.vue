@@ -172,7 +172,7 @@ onMounted(() => {
         <!-- Stats Blocks -->
         <div class="p-4 lg:p-6">
           <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-            <ProjectsCount />
+            <ProjectsCount @open-modal="handleOpenModal" />
             <GitHubActivity />
             <Layer2Investments />
           </div>
@@ -198,7 +198,7 @@ onMounted(() => {
               Projects
             </h1>
             <p class="text-[11px] text-[#a4a4a4]">
-              Showing {{ filteredData.length }} of {{ tableData.length }} protocols
+              Showing {{ filteredData.length }} protocols
             </p>
           </div>
 

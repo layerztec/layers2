@@ -335,9 +335,11 @@
     "Category": "Sidechain",
     "Network Stage": "Mainnet",
     "Native Token": "MAPO",
-    "Founded": "",
+    "Founded": "2019",
     "Image": "map-protocol.png",
-    "Type": "Sidechain"
+    "Type": "Sidechain",
+    "Description": "MAP Protocol is a Bitcoin Layer 2 interoperability solution utilizing ZK light client technology as a gateway for developers and users within the Bitcoin ecosystem. It enables seamless cross-chain interactions between Bitcoin and other public blockchain networks.",
+    "Link": "https://www.mapprotocol.io/"
   },
   {
     "Name": "Mercury Layer",
@@ -742,5 +744,27 @@
     "Type": "Sidechain",
     "Description": "Plasma is a Bitcoin sidechain with full EVM compatibility, engineered for speed and efficiency. It serves as a high-performance settlement layer optimized for fee-free USDT transfers, cross-border payments, remittances, and DeFi services globally.",
     "Link": "https://plasma.to"
+  },
+  {
+    "Name": "Babylon",
+    "Category": "Staking Protocol",
+    "Network Stage": "Mainnet",
+    "Native Token": "BABY",
+    "Founded": "2022",
+    "Image": "babylon.png",
+    "Type": "Other",
+    "Description": "Babylon is a Bitcoin staking protocol that enables non-custodial staking via Taproot time-locked scripts. Users can stake BTC to secure other blockchains while maintaining self-custody and earning rewards, all without wrapping or bridging Bitcoin.",
+    "Link": "https://babylonlabs.io/"
+  },
+  {
+    "Name": "Sova",
+    "Category": "Bitcoin L2",
+    "Network Stage": "Testnet",
+    "Native Token": "SOVA",
+    "Founded": "2024",
+    "Image": "sova.png",
+    "Type": "Other",
+    "Description": "Sova is the first native-Bitcoin treasury chain built on OP Superchain, enabling UTXO-aware, EVM-compatible smart contracts to interact with real BTC without wrapping or federated bridges. Designed for institutional BTC yield generation.",
+    "Link": "https://www.sova.io/"
   }
 ]
