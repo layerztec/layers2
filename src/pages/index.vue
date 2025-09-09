@@ -143,7 +143,7 @@ onMounted(() => {
           href="https://github.com/layerztec/layers2"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded bg-[#f5f5f5] px-4 py-2 text-[13px] font-semibold text-black transition-colors hover:bg-[#00000020]"
+          class="rounded bg-gray-100 px-4 py-2 text-[13px] font-semibold text-black transition-colors hover:bg-gray-200"
         >
           Contribute
         </a>
