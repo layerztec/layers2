@@ -173,8 +173,8 @@ onMounted(() => {
         <div class="p-4 lg:p-6">
           <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
             <ProjectsCount @open-modal="handleOpenModal" />
-            <GitHubActivity />
             <Layer2Investments />
+            <GitHubActivity />
           </div>
         </div>
 
