@@ -612,12 +612,13 @@
   },
   {
     "Name": "Zulu Network",
-    "Category": "zkEVM",
+    "Category": "DePIN",
     "Network Stage": "Testnet",
     "Native Token": "ZULU",
     "Founded": "2023",
     "Image": "zulu-network.png",
     "Type": "Rollup",
+    "Description": "Zulu Network is the first DePIN-focused Bitcoin Layer 2 that achieves tokenization of computing power, enabling anyone to power DePIN innovation and earn Bitcoin. Built on Bitcoin blockchain, it enhances transaction speeds, reduces costs, and maintains Bitcoin's security while introducing EVM compatibility. Zulu features a unique dual-layer architecture with EVM Layer and DePIN Innovation Layer, allowing users to create, build, and trade on Bitcoin with native DeFi & liquidity meeting DePIN. The network is a recognized key contributor to BitVM and poised to launch the first trust-minimized Bitcoin bridge based on BitVM2.",
     "Link": "https://zulunetwork.io/"
   },
   {
@@ -720,7 +721,8 @@
     "Founded": "2024",
     "Image": "zkm.png",
     "Type": "Rollup",
-    "Description": "ZKM is developing a Bitcoin Layer 2 solution focusing on scalability and interoperability, incubated by Ethereum Layer 2 Metis."
+    "Description": "ZKM is building a sustainable Bitcoin economy using Entangled Rollups to enable universal settlement. The platform provides native BTC assets, native security, and native yields through a zkVM-based Entangled Rollup Network. ZKM features an Optimistic Challenge Process for BTC-level security, decentralized sequencers on Bitcoin Layer 2, and a comprehensive staking mechanism. The platform enables MEV opportunities, transaction revenue sharing, and early contributor rewards while maintaining Bitcoin's security model.",
+    "Link": "https://www.zkm.io/btc-economy"
   },
   {
     "Name": "Midl",
