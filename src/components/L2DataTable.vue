@@ -92,7 +92,7 @@ const handleRowClick = (protocol) => {
         class="border border-t-0 border-[#e0e0e0]"
       >
         <!-- Type Section Header -->
-        <div class="border-b border-[#e0e0e0] bg-[#f5f5f5] p-4">
+        <div class="border-b border-[#e0e0e0] bg-gray-50 p-4">
           <div class="text-[13px] font-medium text-[#a4a4a4]">
             {{ type }}
           </div>

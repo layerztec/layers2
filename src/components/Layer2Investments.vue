@@ -33,6 +33,8 @@
           :y="bar.y"
           :width="barWidth"
           :height="bar.height"
+          :rx="4"
+          :ry="4"
           :fill="bar.isHovered ? '#f97316' : '#e5e7eb'"
           class="cursor-pointer transition-colors duration-200"
           @mouseenter="hoverBar(index)"
@@ -154,10 +156,17 @@ const hoveredBar = computed(() => {
 const tooltipStyle = computed(() => {
   if (!hoveredBar.value) return {};
 
+  // Convert viewBox coordinates to percentage for responsive positioning
+  const viewBoxWidth = 400;
+  const viewBoxHeight = 100;
+
+  const xPercent = (hoveredBar.value.x / viewBoxWidth) * 100;
+  const yPercent = (hoveredBar.value.y / viewBoxHeight) * 100;
+
   return {
-    left: `${hoveredBar.value.x + barWidth / 2}px`,
-    top: `${hoveredBar.value.y - 10}px`,
-    transform: 'translateX(-50%)',
+    left: `${xPercent}%`,
+    top: `${yPercent}%`,
+    transform: 'translate(-100%, -100%)',
   };
 });
 

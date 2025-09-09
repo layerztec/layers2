@@ -8,8 +8,8 @@ import Sidebar from '@/components/Sidebar.vue';
 import MobileFilters from '@/components/MobileFilters.vue';
 import SearchBox from '@/components/SearchBox.vue';
 import ProjectsCount from '@/components/ProjectsCount.vue';
-import StatsBlock2 from '@/components/StatsBlock2.vue';
-import StatsBlock3 from '@/components/StatsBlock3.vue';
+import GitHubActivity from '@/components/GitHubActivity.vue';
+import Layer2Investments from '@/components/Layer2Investments.vue';
 
 // Filter states
 const searchTerm = ref('');
@@ -171,10 +171,10 @@ onMounted(() => {
 
         <!-- Stats Blocks -->
         <div class="p-4 lg:p-6">
-          <div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
             <ProjectsCount />
-            <StatsBlock2 />
-            <StatsBlock3 />
+            <GitHubActivity />
+            <Layer2Investments />
           </div>
         </div>
 
