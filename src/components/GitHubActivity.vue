@@ -106,7 +106,7 @@ const fetchPullRequests = async () => {
 
     // Fetch from GitHub API
     const response = await fetch(
-      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=closed&sort=updated&per_page=5`,
+      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=closed&sort=updated&direction=desc&per_page=5`,
     );
 
     if (!response.ok) {
@@ -115,10 +115,21 @@ const fetchPullRequests = async () => {
 
     const data = await response.json();
 
+    // Debug logging
+    // eslint-disable-next-line no-console
+    console.log('GitHub API Response:', data.length, 'PRs');
+    // eslint-disable-next-line no-console
+    console.log('Raw PRs:', data.map((pr) => ({ title: pr.title, merged_at: pr.merged_at, state: pr.state })));
+
     // Filter for merged pull requests and sort by merge date (latest first)
     const mergedPRs = data
       .filter((pr) => pr.merged_at !== null)
       .sort((a, b) => new Date(b.merged_at) - new Date(a.merged_at));
+
+    // eslint-disable-next-line no-console
+    console.log('Merged PRs after filtering:', mergedPRs.length);
+    // eslint-disable-next-line no-console
+    console.log('Merged PRs:', mergedPRs.map((pr) => ({ title: pr.title, merged_at: pr.merged_at })));
 
     // Take only the latest 5 merged PRs
     const latestMergedPRs = mergedPRs.slice(0, 5).map((pr) => ({
@@ -127,6 +138,9 @@ const fetchPullRequests = async () => {
       number: pr.number,
       merged_at: pr.merged_at,
     }));
+
+    // eslint-disable-next-line no-console
+    console.log('Final result:', latestMergedPRs.map((pr) => pr.title));
 
     pullRequests.value = latestMergedPRs;
 
