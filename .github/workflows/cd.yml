@@ -49,8 +49,6 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        env:
-          VITE_BASE_PUBLIC_PATH: ${{ secrets.VITE_BASE_PUBLIC_PATH || '/' }}
         run: pnpm run build
 
       - name: Setup Pages
