@@ -344,7 +344,8 @@
     "Founded": "2021",
     "Image": "mercury-layer.png",
     "Type": "Bitcoin Native",
-    "Description": "Mercury Layer is a Bitcoin statechain implementation that enables off-chain Bitcoin transfers while maintaining security through on-chain enforcement."
+    "Description": "Mercury Layer is a Bitcoin statechain implementation that enables off-chain Bitcoin transfers while maintaining security through on-chain enforcement.",
+    "Link": "https://mercurylayer.com/"
   },
   {
     "Name": "Merlin Chain",
@@ -623,13 +624,14 @@
   },
   {
     "Name": "Lnfi Network",
-    "Category": "State Channel",
+    "Category": "Appchain",
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2024",
     "Image": "lnfi.png",
     "Type": "Bitcoin Native",
-    "Description": "Lnfi Network is a Bitcoin Lightning Network implementation focused on providing fast, low-cost Bitcoin payments with enhanced privacy features."
+    "Description": "Lnfi Network is a Layer 2.5 protocol that enhances Bitcoin's Lightning Network by introducing decentralized finance (DeFi) capabilities. It enables users to issue, trade, and manage assets such as Bitcoin, Taproot Assets, and RGB assets through its LightningFi framework. Built on Bitcoin's Lightning Network, Lnfi provides multi-asset support, full asset lifecycle management, and programmable financial applications while maintaining Bitcoin's security and scalability.",
+    "Link": "https://lnfi.network"
   },
   {
     "Name": "Lygos Finance",
@@ -759,13 +761,24 @@
   },
   {
     "Name": "Sova",
-    "Category": "Bitcoin L2",
+    "Category": "Precompiles",
     "Network Stage": "Testnet",
     "Native Token": "SOVA",
     "Founded": "2024",
     "Image": "sova.png",
     "Type": "Other",
-    "Description": "Sova is the first native-Bitcoin treasury chain built on OP Superchain, enabling UTXO-aware, EVM-compatible smart contracts to interact with real BTC without wrapping or federated bridges. Designed for institutional BTC yield generation.",
+    "Description": "Sova is the first native-Bitcoin treasury chain, enabling UTXO-aware, EVM-compatible smart contracts to interact with real BTC without wrapping or federated bridges. Designed for institutional BTC yield generation.",
     "Link": "https://www.sova.io/"
+  },
+  {
+    "Name": "Starknet",
+    "Category": "Bridge",
+    "Network Stage": "Mainnet",
+    "Native Token": "STRK",
+    "Founded": "2022",
+    "Image": "starknet.png",
+    "Type": "Rollup",
+    "Description": "Starknet is a Layer 2 scaling solution that unifies Bitcoin and Ethereum, enhancing scalability and enabling complex applications and DeFi opportunities without compromising security or decentralization. It utilizes STARK proofs to process transactions off-chain and settle on both Bitcoin and Ethereum networks, serving as a bridge between the two ecosystems while enabling Bitcoin DeFi through LBTC integration, wBTC swaps, and Lightning Network payments.",
+    "Link": "https://www.starknet.io/"
   }
 ]
