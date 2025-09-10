@@ -1,5 +1,5 @@
 <script setup>
-// No imports needed for this component
+import { createSlug } from '@/utils/slug.js';
 
 // Props
 defineProps({
@@ -44,6 +44,19 @@ const getImageUrl = (imageName) => {
 // Handle row click
 const handleRowClick = (protocol) => {
   emit('open-modal', protocol);
+};
+
+// Handle project name click (prevent navigation and row click)
+const handleProjectNameClick = (event, protocol) => {
+  event.preventDefault(); // Prevent default link navigation
+  event.stopPropagation(); // Prevent row click
+  emit('open-modal', protocol);
+};
+
+// Get project URL
+const getProjectUrl = (protocol) => {
+  const slug = createSlug(protocol.Name);
+  return slug ? `/${slug}` : '#';
 };
 </script>
 
@@ -126,9 +139,13 @@ const handleRowClick = (protocol) => {
                   </div>
                 </div>
                 <div class="flex flex-col">
-                  <div class="text-[16px] font-medium text-[#333333]">
+                  <a
+                    :href="getProjectUrl(item)"
+                    class="text-[16px] font-medium text-[#333333] hover:text-blue-600 hover:underline"
+                    @click="handleProjectNameClick($event, item)"
+                  >
                     {{ item.Name || '-' }}
-                  </div>
+                  </a>
                   <div class="text-[13px] text-[#a4a4a4]">
                     {{ item.Category || '-' }}
                   </div>
@@ -169,9 +186,13 @@ const handleRowClick = (protocol) => {
                   </div>
                 </div>
                 <div class="flex min-w-0 flex-1 flex-col">
-                  <div class="truncate text-[14px] font-medium text-[#333333]">
+                  <a
+                    :href="getProjectUrl(item)"
+                    class="truncate text-[14px] font-medium text-[#333333] hover:text-blue-600 hover:underline"
+                    @click="handleProjectNameClick($event, item)"
+                  >
                     {{ item.Name || '-' }}
-                  </div>
+                  </a>
                   <div class="truncate text-[11px] text-[#a4a4a4]">
                     {{ item.Category || '-' }}
                   </div>

@@ -437,19 +437,6 @@
     ]
   },
   {
-    "ProjectName": "Liquid Network",
-    "FundingRounds": [
-      {
-        "Amount": "210,000,000",
-        "Year": "2024",
-        "Investors": [
-          "Fulgur Ventures"
-        ],
-        "Round": "Convertible Note"
-      }
-    ]
-  },
-  {
     "ProjectName": "Midl",
     "FundingRounds": [
       {
@@ -523,6 +510,48 @@
           "Gryps"
         ],
         "Round": "Strategic"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Blockstream",
+    "FundingRounds": [
+      {
+        "Amount": "21,000,000",
+        "Year": "2014",
+        "Investors": [
+          "Khosla Ventures",
+          "Real Ventures",
+          "Reid Hoffman"
+        ],
+        "Round": "Seed"
+      },
+      {
+        "Amount": "55,000,000",
+        "Year": "2016",
+        "Investors": [
+          "Horizons Ventures",
+          "AXA Strategic Ventures",
+          "Digital Garage"
+        ],
+        "Round": "Series A"
+      },
+      {
+        "Amount": "210,000,000",
+        "Year": "2021",
+        "Investors": [
+          "Baillie Gifford",
+          "iFinex (Bitfinex)"
+        ],
+        "Round": "Series B"
+      },
+      {
+        "Amount": "210,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Fulgur Ventures"
+        ],
+        "Round": "Convertible Note"
       }
     ]
   },

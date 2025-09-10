@@ -1,5 +1,8 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import {
+  ref, computed, onMounted, watch,
+} from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import L2DataTable from '@/components/L2DataTable.vue';
 import ProtocolModal from '@/components/ProtocolModal.vue';
 import Logo from '@/components/Logo.vue';
@@ -10,6 +13,19 @@ import SearchBox from '@/components/SearchBox.vue';
 import ProjectsCount from '@/components/ProjectsCount.vue';
 import GitHubActivity from '@/components/GitHubActivity.vue';
 import Layer2Investments from '@/components/Layer2Investments.vue';
+import { createSlug, findProjectBySlug } from '@/utils/slug.js';
+
+// Props for URL handling
+defineProps({
+  projectSlug: {
+    type: String,
+    default: null,
+  },
+});
+
+// Router
+const route = useRoute();
+const router = useRouter();
 
 // Filter states
 const searchTerm = ref('');
@@ -19,6 +35,8 @@ const selectedNetworkStage = ref('');
 
 // Data
 const tableData = ref([]);
+const fundingData = ref([]);
+const stewardsData = ref([]);
 const loading = ref(true);
 
 // Modal state
@@ -75,6 +93,47 @@ const filteredData = computed(() => {
   return filtered;
 });
 
+// Calculate total funding for each project (including stewards)
+const projectFunding = computed(() => {
+  const fundingMap = new Map();
+
+  // Process main project funding
+  fundingData.value.forEach((project) => {
+    const projectName = project.ProjectName;
+    let totalFunding = 0;
+
+    project.FundingRounds?.forEach((round) => {
+      const amount = parseFloat(round.Amount?.replace(/,/g, '') || '0');
+      totalFunding += amount;
+    });
+
+    fundingMap.set(projectName, totalFunding);
+  });
+
+  // Process stewards funding and add to main projects
+  stewardsData.value.forEach((steward) => {
+    const stewardName = steward.Steward;
+    let stewardFunding = 0;
+
+    // Find steward funding in funding data
+    const stewardFundingData = fundingData.value.find((p) => p.ProjectName === stewardName);
+    if (stewardFundingData) {
+      stewardFundingData.FundingRounds?.forEach((round) => {
+        const amount = parseFloat(round.Amount?.replace(/,/g, '') || '0');
+        stewardFunding += amount;
+      });
+    }
+
+    // Add steward funding to each project they support
+    steward.Projects?.forEach((projectName) => {
+      const currentFunding = fundingMap.get(projectName) || 0;
+      fundingMap.set(projectName, currentFunding + stewardFunding);
+    });
+  });
+
+  return fundingMap;
+});
+
 // Grouped data
 const groupedData = computed(() => {
   const groups = {};
@@ -86,12 +145,23 @@ const groupedData = computed(() => {
     groups[type].push(item);
   });
 
-  // Sort groups by custom type order and sort items within each group by name
+  // Sort groups by custom type order and sort items within each group by funding (desc) then name (asc)
   const typeOrder = ['Bitcoin Native', 'Rollup', 'Sidechain', 'Meta Protocols', 'Other'];
   const sortedGroups = {};
   typeOrder.forEach((type) => {
     if (groups[type]) {
-      sortedGroups[type] = groups[type].sort((a, b) => a.Name.localeCompare(b.Name));
+      sortedGroups[type] = groups[type].sort((a, b) => {
+        const fundingA = projectFunding.value.get(a.Name) || 0;
+        const fundingB = projectFunding.value.get(b.Name) || 0;
+
+        // First sort by funding (descending)
+        if (fundingA !== fundingB) {
+          return fundingB - fundingA;
+        }
+
+        // Then sort by name (ascending)
+        return a.Name.localeCompare(b.Name);
+      });
     }
   });
   return sortedGroups;
@@ -101,8 +171,15 @@ const groupedData = computed(() => {
 const loadData = async () => {
   try {
     loading.value = true;
-    const data = await import('@/assets/data/layers-data.json');
-    tableData.value = data.default;
+    const [layersData, fundingDataImport, stewardsDataImport] = await Promise.all([
+      import('@/assets/data/layers-data.json'),
+      import('@/assets/data/funding-rounds.json'),
+      import('@/assets/data/stewards.json'),
+    ]);
+
+    tableData.value = layersData.default;
+    fundingData.value = fundingDataImport.default;
+    stewardsData.value = stewardsDataImport.default;
   } catch (error) {
     // Handle error silently
   } finally {
@@ -114,12 +191,114 @@ const loadData = async () => {
 const handleOpenModal = (protocol) => {
   selectedProtocol.value = protocol;
   isModalOpen.value = true;
+
+  // Update URL
+  const slug = createSlug(protocol.Name);
+  if (slug) {
+    router.push(`/${slug}`);
+  }
 };
 
 const handleCloseModal = () => {
   isModalOpen.value = false;
   selectedProtocol.value = null;
+
+  // Update URL to home
+  router.push('/');
 };
+
+// Handle URL changes and open modal if project slug is provided
+const handleUrlChange = () => {
+  const { projectSlug } = route.params;
+
+  if (projectSlug && tableData.value.length > 0) {
+    const project = findProjectBySlug(tableData.value, projectSlug);
+    if (project) {
+      selectedProtocol.value = project;
+      isModalOpen.value = true;
+    } else {
+      // Project not found, redirect to home
+      router.push('/');
+    }
+  } else if (!projectSlug) {
+    // No project slug, close modal if open
+    isModalOpen.value = false;
+    selectedProtocol.value = null;
+  }
+};
+
+// Watch for route changes
+watch(() => route.params.projectSlug, () => {
+  handleUrlChange();
+});
+
+// Watch for data loading completion
+watch(() => tableData.value.length, () => {
+  if (tableData.value.length > 0) {
+    handleUrlChange();
+  }
+});
+
+// Update meta tags when modal opens
+watch(() => selectedProtocol.value, (newProtocol) => {
+  if (newProtocol && typeof document !== 'undefined') {
+    // Update page title
+    document.title = `${newProtocol.Name} - layers2.com`;
+
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      const description = `${newProtocol.Name} - ${newProtocol.Category} Bitcoin Layer 2 project. `
+        + `${newProtocol.Description || 'Learn more about this Bitcoin scaling solution.'}`;
+      metaDescription.setAttribute('content', description);
+    }
+
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', `${newProtocol.Name} - layers2.com`);
+    }
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      const ogDesc = `${newProtocol.Name} - ${newProtocol.Category} Bitcoin Layer 2 project. `
+        + `${newProtocol.Description || 'Learn more about this Bitcoin scaling solution.'}`;
+      ogDescription.setAttribute('content', ogDesc);
+    }
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', `https://layers2.com/${createSlug(newProtocol.Name)}`);
+    }
+  } else if (typeof document !== 'undefined') {
+    // Reset to default meta tags
+    document.title = 'layers2.com - Track bitcoin layers 2 projects';
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      const defaultDesc = 'Track bitcoin layers 2 projects - Lightning, Spark, Liquid, Citrea, '
+        + 'Stacks, Rootstock, Runes, Ordinals and more.';
+      metaDescription.setAttribute('content', defaultDesc);
+    }
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'layers2.com - Track bitcoin layers 2 projects');
+    }
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      const defaultOgDesc = 'Track bitcoin layers 2 projects - Lightning, Spark, Liquid, Citrea, '
+        + 'Stacks, Rootstock, Runes, Ordinals and more.';
+      ogDescription.setAttribute('content', defaultOgDesc);
+    }
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', 'https://layers2.com');
+    }
+  }
+});
 
 onMounted(() => {
   loadData();
