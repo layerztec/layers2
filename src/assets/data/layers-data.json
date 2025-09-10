@@ -219,9 +219,11 @@
     "Category": "Drivechain",
     "Network Stage": "Testnet",
     "Native Token": "BTC",
-    "Founded": "2022",
+    "Founded": "2023",
     "Image": "drivechain.png",
-    "Type": "Sidechain"
+    "Type": "Other",
+    "Description": "Drivechain is a proposed Bitcoin soft fork upgrade (BIP 300/301) that would enable superior sidechains for Bitcoin, designed to 'make every transaction a Bitcoin transaction.' Unlike current federated sidechains, Drivechain would use Bitcoin miners for security through blind merged mining and a two-way peg system called hashrate escrow. The proposal aims to provide infinite liquidity, 0% failure rates, and instant deposits with 3-6 month withdrawals. However, Drivechain is not possible today as it depends on BIPs 300 and 301 being implemented on Bitcoin through a soft fork, which requires miner consensus and has not yet been activated. The technology would enable smart contracts, DeFi applications, and asset tokenization while maintaining Bitcoin's economic security model.",
+    "Link": "https://layertwolabs.com/"
   },
   {
     "Name": "Elastos",
@@ -646,11 +648,12 @@
     "Founded": "2025",
     "Image": "lygos-finance.png",
     "Type": "Bitcoin Native",
-    "Description": "Lygos Finance leverages Discreet Log Contracts (DLCs) to enable Bitcoin-based financial derivatives and smart contract functionality on Bitcoin."
+    "Description": "Lygos Finance is a non-custodial Bitcoin-backed lending platform designed for institutions and high-net-worth individuals (HNWIs). The platform leverages Discreet Log Contracts (DLCs) to enable fully Bitcoin-native lending without custodians, rehypothecate, or wrapping. Built by experts from Anchorage Digital, StarkWare, ConsenSys, Shopify, and JPMorgan, Lygos provides unparalleled certainty and control by ensuring nobody can access, rehypothecate, or freeze Bitcoin collateral. The platform offers fully on-chain and verifiable loan mechanics, eliminating shared custodians and cross-jurisdictional complexity while maintaining Bitcoin's native security model.",
+    "Link": "https://www.lygos.finance/"
   },
   {
     "Name": "BTKN",
-    "Category": "Keys",
+    "Category": "Token Standard",
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2024",
@@ -661,42 +664,46 @@
   },
   {
     "Name": "Runes",
-    "Category": "Op_Return",
+    "Category": "Fungible Tokens",
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2024",
     "Image": "runes.png",
     "Type": "Meta Protocols",
+    "Description": "Runes is a token standard introduced by Casey Rodarmor in September 2023 and launched during the Bitcoin halving in April 2024, designed to create fungible tokens on Bitcoin with emphasis on efficiency and simplicity. It leverages Bitcoin's native UTXO model and OP_RETURN opcode to provide a more efficient token issuance mechanism, requiring only one transaction per transfer compared to BRC-20's two. Runes are highly compatible with existing Bitcoin infrastructure and support integration with the Lightning Network for faster transactions. Since its launch, Runes has led Bitcoin network activity, surpassing both Ordinals and BRC-20 in transaction share, indicating strong community adoption.",
     "Link": "https://docs.ordinals.com/runes.html"
   },
   {
     "Name": "Alkanes",
-    "Category": "Witness",
+    "Category": "Smart Contracts",
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
-    "Founded": "2024",
+    "Founded": "2025",
     "Image": "alkanes.png",
     "Type": "Meta Protocols",
-    "Link": "https://alkanes-docs.vercel.app/"
+    "Description": "Alkanes is a Bitcoin meta-protocol developed by Oyl Corp that enables trustless smart contract functionality directly on Bitcoin's mainnet without relying on bridges or external execution layers. It utilizes Bitcoin's witness data and OP_RETURN fields to execute smart contracts and track state changes through a WASM-based execution environment. Alkanes introduces 'Protostones' and 'Orbitals' (NFTs) standards, enabling complex operations like minting, exchanging, and burning. The protocol features a template factory mechanism for efficient contract deployment, supporting applications like AMMs, staking contracts, and NFT exchanges natively on Bitcoin.",
+    "Link": "https://alkanes.build/"
   },
   {
     "Name": "Ordinals",
-    "Category": "Witness",
+    "Category": "NFTs",
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2023",
     "Image": "ordinals.png",
     "Type": "Meta Protocols",
+    "Description": "Ordinals is a protocol launched in January 2023 by Casey Rodarmor that allows users to inscribe unique content onto individual satoshis, effectively creating NFTs directly on the Bitcoin blockchain. This innovation enables the creation of digital artifacts without requiring changes to Bitcoin's protocol or the need for sidechains. Ordinals sparked significant cultural and economic activity within the Bitcoin ecosystem, leading to a surge in creative and collectible digital assets. However, the popularity of Ordinals led to increased transaction fees and network congestion, raising concerns about scalability and efficiency within the Bitcoin community.",
     "Link": "https://docs.ordinals.com/"
   },
   {
     "Name": "BRC-20",
-    "Category": "Witness",
+    "Category": "Token Standard",
     "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2023",
     "Image": "brc-20.png",
     "Type": "Meta Protocols",
+    "Description": "BRC-20 is an experimental token standard introduced in February 2023 that enables the creation and transfer of fungible tokens on the Bitcoin blockchain using the Ordinals protocol. It works by inscribing JSON data onto individual satoshis, allowing anyone to mint tokens once created through an open minting process. However, BRC-20 requires two on-chain transactions for every transfer, leading to higher block space usage and potential network congestion. The standard requires Taproot-enabled wallets or access to Bitcoin Layer 2 networks for operation, limiting accessibility for some users.",
     "Link": "https://brc20.com/"
   },
   {
@@ -840,5 +847,16 @@
     "Type": "Rollup",
     "Description": "Fiamma is pioneering BitVM2 (Bitcoin Virtual Machine) to create the first trust-minimized, non-custodial Bitcoin bridge. The Fiamma Bridge enables 1:1 pegged FiaBTC tokens secured by Bitcoin through zero-knowledge challenges, Taproot logic, and on-chain fraud-proof resolution. Built with Isolated Safe Architecture™, each user's funds are secured in personal vaults with joint control, making it hack-resistant even if the entire committee is compromised. The bridge supports 11+ chains and has been battle-tested by 300K+ users with 6M+ transactions across Ethereum, Solana, BOB, and other networks.",
     "Link": "https://www.fiammalabs.io/"
+  },
+  {
+    "Name": "Arch",
+    "Category": "Anchored Chain",
+    "Network Stage": "Testnet",
+    "Native Token": "ARCH",
+    "Founded": "2024",
+    "Image": "arch.png",
+    "Type": "Other",
+    "Description": "Arch Network is building the infrastructure for a Bitcoin-denominated world through its novel ArchVM execution environment. Unlike traditional L2s and sidechains, Arch enables developers to access base layer Bitcoin and UTXO assets without bridging or wrapping coins. The ArchVM works directly with Bitcoin's UTXO model using eBPF technology, allowing smart contracts to execute directly on Bitcoin's base layer while preserving Bitcoin's core values. Arch features a decentralized verifier network with stake-weighted dPoS consensus and implements cutting-edge FROST + ROAST signature schemes for dynamic signer sets, ensuring Bitcoin-native settlement without bridges.",
+    "Link": "https://www.arch.network/"
   }
 ]

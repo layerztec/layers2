@@ -677,5 +677,59 @@
         "Round": "Seed"
       }
     ]
+  },
+  {
+    "ProjectName": "Arch",
+    "FundingRounds": [
+      {
+        "Amount": "7,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Multicoin Capital",
+          "OKX Ventures",
+          "Portal Ventures",
+          "Big Brain Holdings",
+          "CMS Holdings",
+          "Tangent"
+        ],
+        "Round": "Seed"
+      },
+      {
+        "Amount": "13,000,000",
+        "Year": "2025",
+        "Investors": [
+          "Pantera Capital"
+        ],
+        "Round": "Series A"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Drivechain",
+    "FundingRounds": [
+      {
+        "Amount": "3,000,000",
+        "Year": "2022",
+        "Investors": [
+          "Angel Investors"
+        ],
+        "Round": "Seed"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Alkanes",
+    "FundingRounds": [
+      {
+        "Amount": "3,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Arca",
+          "Maelstrom",
+          "Domo"
+        ],
+        "Round": "Seed"
+      }
+    ]
   }
 ]
