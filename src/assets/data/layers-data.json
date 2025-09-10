@@ -241,7 +241,9 @@
     "Native Token": "fm-BTC",
     "Founded": "2022",
     "Image": "fedimint.png",
-    "Type": "Other"
+    "Type": "Other",
+    "Description": "Fedimint is an open-source protocol that enables communities to establish federated mints for collective Bitcoin custody and privacy-enhanced transactions. Using Chaumian eCash and a federation of guardians, it offers a trust-minimized, scalable, and private alternative to centralized custodial services. Users deposit Bitcoin to receive privacy-preserving eCash notes that can be spent instantly within the federation or through Lightning Network integration. The modular design allows communities to manage their own financial infrastructure while maintaining strong privacy guarantees through blinded signatures.",
+    "Link": "https://fedimint.org/"
   },
   {
     "Name": "Gelios",
