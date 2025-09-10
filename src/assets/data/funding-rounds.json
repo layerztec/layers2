@@ -613,5 +613,42 @@
         "Round": "Series A"
       }
     ]
+  },
+  {
+    "ProjectName": "Hemi",
+    "FundingRounds": [
+      {
+        "Amount": "15,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Binance Labs",
+          "Breyer Capital",
+          "Big Brain Holdings",
+          "Crypto.com",
+          "Web3 Ventures",
+          "HyperChain Capital",
+          "Alchem"
+        ],
+        "Round": "Strategic"
+      },
+      {
+        "Amount": "15,000,000",
+        "Year": "2025",
+        "Investors": [
+          "YZi Labs",
+          "Republic Digital",
+          "HyperChain Capital",
+          "Breyer Capital",
+          "Big Brain Holdings",
+          "Crypto.com",
+          "DNA Fund",
+          "Selini Capital",
+          "Protein Capital",
+          "Quantstamp",
+          "Web3.com"
+        ],
+        "Round": "Growth"
+      }
+    ]
   }
 ]

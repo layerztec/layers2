@@ -780,5 +780,27 @@
     "Type": "Rollup",
     "Description": "Starknet is a Layer 2 scaling solution that unifies Bitcoin and Ethereum, enhancing scalability and enabling complex applications and DeFi opportunities without compromising security or decentralization. It utilizes STARK proofs to process transactions off-chain and settle on both Bitcoin and Ethereum networks, serving as a bridge between the two ecosystems while enabling Bitcoin DeFi through LBTC integration, wBTC swaps, and Lightning Network payments.",
     "Link": "https://www.starknet.io/"
+  },
+  {
+    "Name": "Hemi",
+    "Category": "Zk-rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "HEMI",
+    "Founded": "2022",
+    "Image": "hemi.png",
+    "Type": "Rollup",
+    "Description": "Hemi is the world's largest Bitcoin programmability layer with $1.2B+ TVL and 90+ protocols. It integrates a full Bitcoin node inside an Ethereum-compatible EVM, enabling developers to create applications that interact directly with Bitcoin data. Using proprietary Proof-of-Proof (PoP) consensus, Hemi achieves Bitcoin-level finality while maintaining L2 speed and flexibility. The protocol enables low-fee Bitcoin DeFi, trustless re-staking with native BTC, and seamless cross-chain tunneling between Bitcoin and Ethereum ecosystems.",
+    "Link": "https://hemi.xyz/"
+  },
+  {
+    "Name": "GOAT Network",
+    "Category": "Zk-rollup",
+    "Network Stage": "Mainnet",
+    "Native Token": "BTC",
+    "Founded": "2024",
+    "Image": "goat-network.png",
+    "Type": "Rollup",
+    "Description": "GOAT Network is the first Bitcoin ZK rollup with real yield, focusing on generating sustainable Bitcoin yield through on-chain economic activities rather than inflationary token emissions. Built with Ziren and GOAT BitVM2 technology, it provides trust-minimized bridging with zero trust assumptions and decentralized sequencers. The network enables users to earn native BTC yield through multiple strategies including SafeBox (2% APY), PoS staking, and options markets (10% APY), while supporting cross-chain yield generation like 'Stake DOGE, Earn BTC'.",
+    "Link": "https://www.goat.network/"
   }
 ]
