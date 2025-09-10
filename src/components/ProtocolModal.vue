@@ -1,5 +1,7 @@
 <script setup>
-import { computed, onMounted, onUnmounted } from 'vue';
+import {
+  computed, onMounted, onUnmounted, watch,
+} from 'vue';
 import fundingRoundsData from '@/assets/data/funding-rounds.json';
 import stewardsData from '@/assets/data/stewards.json';
 
@@ -88,13 +90,37 @@ const handleKeydown = (event) => {
   }
 };
 
+// Handle body scroll lock
+const lockBodyScroll = () => {
+  document.body.style.overflow = 'hidden';
+};
+
+const unlockBodyScroll = () => {
+  document.body.style.overflow = '';
+};
+
+// Watch for modal open/close to manage body scroll
+watch(() => props.isOpen, (isOpen) => {
+  if (isOpen) {
+    lockBodyScroll();
+  } else {
+    unlockBodyScroll();
+  }
+});
+
 // Add event listener when component mounts
 onMounted(() => {
   document.addEventListener('keydown', handleKeydown);
+  // Lock scroll if modal is already open
+  if (props.isOpen) {
+    lockBodyScroll();
+  }
 });
 
 onUnmounted(() => {
   document.removeEventListener('keydown', handleKeydown);
+  // Ensure scroll is unlocked when component unmounts
+  unlockBodyScroll();
 });
 </script>
 
@@ -102,11 +128,11 @@ onUnmounted(() => {
   <!-- Protocol Details Modal -->
   <div
     v-if="isOpen"
-    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-gray-300/95 p-0 lg:p-4"
     @click="closeModal"
   >
     <div
-      class="relative flex size-full max-h-[90vh] max-w-2xl flex-col rounded-lg bg-white shadow-xl dark:bg-gray-800"
+      class="relative flex size-full max-h-screen max-w-none flex-col bg-white shadow-xl dark:bg-gray-800 lg:max-h-[90vh] lg:max-w-2xl lg:rounded-lg"
       @click.stop
     >
       <!-- Fixed Header -->
@@ -349,19 +375,6 @@ onUnmounted(() => {
           class="inline-flex w-full items-center justify-center rounded bg-[#f5f5f5] px-4 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#00000020] dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
         >
           Visit project
-          <svg
-            class="ml-2 size-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            />
-          </svg>
         </a>
       </div>
     </div>
