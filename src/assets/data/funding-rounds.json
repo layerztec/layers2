@@ -650,5 +650,32 @@
         "Round": "Growth"
       }
     ]
+  },
+  {
+    "ProjectName": "Biop",
+    "FundingRounds": [
+      {
+        "Amount": "40,000",
+        "Year": "2023",
+        "Investors": [
+          "Gate.io"
+        ],
+        "Round": "IEO"
+      }
+    ]
+  },
+  {
+    "ProjectName": "Fiamma",
+    "FundingRounds": [
+      {
+        "Amount": "4,000,000",
+        "Year": "2024",
+        "Investors": [
+          "Lightspeed Faction",
+          "L2 Iterative Ventures"
+        ],
+        "Round": "Seed"
+      }
+    ]
   }
 ]

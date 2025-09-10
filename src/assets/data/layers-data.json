@@ -74,22 +74,25 @@
   },
   {
     "Name": "Biop",
-    "Category": "Zk-rollup",
+    "Category": "Optimistic Rollup",
     "Network Stage": "Mainnet",
     "Native Token": "BIOP",
     "Founded": "2023",
     "Image": "biop.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Description": "Biop is the first Bitcoin Layer 2 blockchain based on the Optimistic Rollup protocol, offering increased safety, intelligence, speed, and cost-effectiveness. Built using the Bitcoin Virtual Machine (BVM), it enables smart contract execution on Bitcoin while supporting decentralized BRC-20 token deployment, transfer, and verification. Biop facilitates DeFi, NFTs, GameFi, and SocialFi applications through bidirectional synchronization between Bitcoin's ledger and smart contracts, establishing a decentralized Bitcoin ecosystem.",
+    "Link": "https://biop.io/"
   },
   {
     "Name": "Bison",
     "Category": "Zk-rollup",
     "Network Stage": "Testnet",
     "Native Token": "BTC",
-    "Founded": "2023",
+    "Founded": "2024",
     "Image": "bison.png",
     "Type": "Rollup",
-    "Description": "Bison Network is a sovereign rollup using ZK-STARK technology with Bitcoin as its data availability layer. It enables EVM-compatible smart contracts and achieves up to 2,200 TPS with significantly lower fees than Bitcoin."
+    "Description": "Bison Labs is developing a sovereign rollup using ZK-STARK technology on Bitcoin, aiming to provide a trustless and on-chain Layer 2 solution with minimal trust assumptions and high security. The protocol emphasizes client-side verification and secures assets through joint custody Discreet Log Contracts (DLCs), ensuring high security while maintaining Bitcoin's decentralization principles.",
+    "Link": "https://bisonlabs.io/"
   },
   {
     "Name": "BVM",
@@ -112,7 +115,7 @@
  
   {
     "Name": "BitLayer",
-    "Category": "Zk-rollup",
+    "Category": "Optimistic Rollup",
     "Network Stage": "Testnet",
     "Native Token": "YBTC",
     "Founded": "2024",
@@ -134,7 +137,7 @@
   },
   {
     "Name": "BOB",
-    "Category": "Zk-rollup",
+    "Category": "Optimistic Rollup",
     "Network Stage": "Mainnet",
     "Native Token": "",
     "Founded": "2023",
@@ -281,7 +284,9 @@
     "Native Token": "LIBRE",
     "Founded": "2022",
     "Image": "libre.png",
-    "Type": "Sidechain"
+    "Type": "Sidechain",
+    "Description": "Libre is a Bitcoin-first DeFi blockchain designed to make Bitcoin faster, cheaper, and more programmable without requiring EVM compatibility or MetaMask. Built with a usability-first approach, it achieves 4,000+ transactions per second (1000x faster than Bitcoin) with 0.5-second block times and zero transaction fees. Libre features seamless Lightning Network integration, human-readable usernames, and 100% on-chain BTC/USDT swaps with 0.1% trading fees. The network uses a fair launch distribution model with no VC premine, enabling LIBRE stakers to participate in DAO governance and earn yield through staking and liquidity provision.",
+    "Link": "https://chain.libre.org/"
   },
   {
     "Name": "Lightec",
@@ -456,7 +461,7 @@
   },
   {
     "Name": "Rollux",
-    "Category": "Zk-rollup",
+    "Category": "Optimistic Rollup",
     "Network Stage": "Mainnet",
     "Native Token": "SYS",
     "Founded": "2023",
@@ -802,5 +807,38 @@
     "Type": "Rollup",
     "Description": "GOAT Network is the first Bitcoin ZK rollup with real yield, focusing on generating sustainable Bitcoin yield through on-chain economic activities rather than inflationary token emissions. Built with Ziren and GOAT BitVM2 technology, it provides trust-minimized bridging with zero trust assumptions and decentralized sequencers. The network enables users to earn native BTC yield through multiple strategies including SafeBox (2% APY), PoS staking, and options markets (10% APY), while supporting cross-chain yield generation like 'Stake DOGE, Earn BTC'.",
     "Link": "https://www.goat.network/"
+  },
+  {
+    "Name": "Rosetta Network",
+    "Category": "Sidechain",
+    "Network Stage": "Testnet",
+    "Native Token": "RSTT",
+    "Founded": "2022",
+    "Image": "rosetta-network.png",
+    "Type": "Sidechain",
+    "Description": "Rosetta Network is a Bitcoin Layer 2 Inscription Network designed to address verifiability, interoperability, and practical utility challenges inherent in the Inscription and BRC-20 protocols. Its protocol stack includes the Bitcoin Layer, Inscription Layer, BRC Layer, and Application Layer, facilitating cross-chain interoperability and EVM compatibility while maintaining Bitcoin's security model.",
+    "Link": "https://rosettanetwork.io/"
+  },
+  {
+    "Name": "ExSat",
+    "Category": "Sidechain",
+    "Network Stage": "Mainnet",
+    "Native Token": "XSAT",
+    "Founded": "2024",
+    "Image": "exsat.png",
+    "Type": "Sidechain",
+    "Description": "ExSat Network is a Bitcoin Layer 2 scaling solution that launched its mainnet in October 2024 with over $281M TVL. It introduces a 'Docking Layer' that combines Proof of Work (PoW) and Proof of Stake (PoS) mechanisms to extend Bitcoin's data consensus. The network features a dual-layer architecture with a Native Layer (C++ smart contracts on WASM runtime) and an EVM Layer (fully compatible with Ethereum's Shanghai upgrade). ExSat enables Bitcoin staking, cross-chain bridging, and supports BTC, Ordinals, and Runes while providing both native Bitcoin capabilities and EVM compatibility for developers.",
+    "Link": "https://exsat.network/"
+  },
+  {
+    "Name": "Fiamma",
+    "Category": "Bridge",
+    "Network Stage": "Mainnet",
+    "Native Token": "FiaBTC",
+    "Founded": "2024",
+    "Image": "fiamma.png",
+    "Type": "Rollup",
+    "Description": "Fiamma is pioneering BitVM2 (Bitcoin Virtual Machine) to create the first trust-minimized, non-custodial Bitcoin bridge. The Fiamma Bridge enables 1:1 pegged FiaBTC tokens secured by Bitcoin through zero-knowledge challenges, Taproot logic, and on-chain fraud-proof resolution. Built with Isolated Safe Architecture™, each user's funds are secured in personal vaults with joint control, making it hack-resistant even if the entire committee is compromised. The bridge supports 11+ chains and has been battle-tested by 300K+ users with 6M+ transactions across Ethereum, Solana, BOB, and other networks.",
+    "Link": "https://www.fiammalabs.io/"
   }
 ]
