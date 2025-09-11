@@ -17,7 +17,8 @@
     "Native Token": "",
     "Founded": "2022",
     "Image": "alpen-labs.png",
-    "Type": "Rollup"
+    "Type": "Rollup",
+    "Link": "https://alpenlabs.io/"
   },
   {
     "Name": "Anduro",
@@ -105,12 +106,14 @@
   },
   {
     "Name": "Bitcredit Protocol",
-    "Category": "Credit mint",
+    "Category": "Chaumian Ecash",
     "Network Stage": "Testnet",
-    "Native Token": "brc-BTC",
-    "Founded": "2022",
+    "Description": "Bitcredit is a Bitcoin credit money system that creates claims to future Bitcoin backed by electronic bills of exchange (e-bills). Unlike altcoins, Bitcredit serves as the credit money layer of Bitcoin, stabilizing its purchasing power through a credit superstructure backed by real goods and services. The system uses electronic bills of exchange - time-proven payment instruments regulated internationally - that are transformed into Bitcredit by decentralized mints running 'Wildcat' software. These mints can only create Bitcredit against verifiable real value, not out of thin air, ensuring sound money principles. The protocol includes eIOU capital that absorbs Bitcoin's volatility and enables bitcoinization, with governance through decentralized 'ungovernance' processes. Bitcredit provides privacy through private e-cash while maintaining transparency for business transactions, creating a full reserve banking system that eliminates fractional reserve risks and bank runs.",
+    "Native Token": "eIOU",
+    "Founded": "2024",
     "Image": "bitcredit-protocol.png",
-    "Type": "Other"
+    "Type": "Other",
+    "Link": "https://www.bitcr.org/"
   },
  
   {
@@ -497,15 +500,6 @@
     "Link": "https://www.rsk.co/"
   },
   {
-    "Name": "Rosetta Network",
-    "Category": "Sidechain",
-    "Network Stage": "Testnet",
-    "Native Token": "RSTT",
-    "Founded": "2022",
-    "Image": "rosetta-network.png",
-    "Type": "Sidechain"
-  },
-  {
     "Name": "Satoshi Protocol",
     "Category": "DeFi",
     "Network Stage": "Testnet",
@@ -536,22 +530,24 @@
   },
   {
     "Name": "Side Protocol",
-    "Category": "Sidechain",
-    "Network Stage": "Testnet",
+    "Category": "DeFi",
+    "Network Stage": "Mainnet",
+    "Description": "Side Protocol is a comprehensive Bitcoin financial infrastructure that unlocks the potential of underutilized BTC through three core components. The Side Chain is a Bitcoin-compatible L1 blockchain that preserves native Bitcoin addresses and wallet compatibility, allowing users to sign transactions with standard Bitcoin wallets. Side Lending enables non-custodial BTC-backed loans powered by Discreet Log Contracts (DLCs) with permissionless liquidity pools and no rehypothecation. Side Bitcoin (sBTC) is a FROST-based Bitcoin bridge that creates 1:1 Bitcoin-backed programmable assets, secured by 21 validators and audited by Blocksec. Together, these components enable users to maintain their existing Bitcoin wallets while accessing DeFi services, native BTC-backed lending, and cross-chain Bitcoin utilization without compromising security or custody.",
     "Native Token": "sBTC",
-    "Founded": "2021",
+    "Founded": "2023",
     "Image": "side-protocol.png",
     "Type": "Sidechain",
     "Link": "https://side.one/"
   },
   {
     "Name": "Sovryn",
-    "Category": "Zk-rollup",
+    "Category": "DeFi",
     "Network Stage": "Mainnet",
-    "Native Token": "RBTC",
+    "Description": "Sovryn is a comprehensive Bitcoin-native DeFi platform that enables decentralized trading, lending, borrowing, and earning on Bitcoin. The platform features the Zero Protocol for 0% interest Bitcoin-backed loans and Bitcoin-backed stablecoins (Sovryn Dollar/DLLR), eliminating traditional lending risks through decentralized mechanisms. Sovryn operates a full-featured DEX with spot trading, margin trading, and liquidity provision, all secured by Bitcoin's proof-of-work. The platform has incubated BitcoinOS, a technology stack that brings zk-powered rollups and multiple virtual machines (EVM, SolanaVM, MoveVM) to Bitcoin, creating an execution layer for Bitcoin-native smart contracts. Governance operates through Bitocracy, where SOV token stakers participate in protocol decisions and earn rewards, fostering a community-driven approach to Bitcoin DeFi development.",
+    "Native Token": "SOV",
     "Founded": "2020",
     "Image": "sovryn.png",
-    "Type": "Rollup",
+    "Type": "Sidechain",
     "Link": "https://sovryn.com/"
   },
   {

@@ -385,6 +385,36 @@
     ]
   },
   {
+    "ProjectName": "Stacks",
+    "FundingRounds": [
+      {
+        "Amount": "50,000,000",
+        "Year": "2017",
+        "Investors": [
+          "Union Square Ventures",
+          "Foundation Capital",
+          "Lux Capital",
+          "Winklevoss Capital",
+          "Blockchain Capital",
+          "Digital Currency Group",
+          "Kevin Rose",
+          "Michael Arrington",
+          "Qasar Younis"
+        ],
+        "Round": "ICO"
+      },
+      {
+        "Amount": "23,000,000",
+        "Year": "2019",
+        "Investors": [
+          "SEC Reg A+ Offering",
+          "4,500+ Investors"
+        ],
+        "Round": "Reg A+"
+      }
+    ]
+  },
+  {
     "ProjectName": "TunaChain",
     "FundingRounds": [
       {
