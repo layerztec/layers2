@@ -32,12 +32,12 @@
   {
     "Name": "Ark",
     "Category": "Virtual UTXOs",
-    "Network Stage": "Testnet",
+    "Network Stage": "Mainnet",
     "Native Token": "BTC",
     "Founded": "2024",
     "Image": "ark.png",
     "Type": "Bitcoin Native",
-    "Description": "Ark is a groundbreaking Bitcoin Layer 2 solution that enables instant, private Bitcoin payments through virtual UTXOs without requiring on-chain transactions or Lightning channels. By creating a virtual UTXO system, Ark allows users to send Bitcoin instantly and privately while maintaining full Bitcoin security. The protocol eliminates the need for channel management, routing complexity, and on-chain fees, making Bitcoin payments as simple as traditional digital payments while preserving Bitcoin's core properties.",
+    "Description": "Ark is a client-server protocol for Bitcoin that enables very low-cost off-chain payments. It uses virtual transaction outputs (VTXOs) — off-chain UTXO-like objects backed by pre-signed Bitcoin transactions — giving users instant, parallel execution via a “virtual mempool.” Users retain unilateral exit rights: they can always settle their VTXOs on-chain, while a server coordinates efficient batch settlement. The system also enables native Lightning payments without channel creation, offering a solution for user onboarding.",
     "Link": "https://arklabs.xyz/"
   },
   {
